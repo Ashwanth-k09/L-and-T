@@ -1,0 +1,12 @@
+{
+  "spark": {
+    "master_host": "10.185.180.147",
+    "master_user": "vboxuser",
+    "master_password": "009",
+    "worker_hosts": [
+      "10.185.180.234"
+    ],
+    "worker_user": "vboxuser",
+    "worker_password": "8866"
+  }
+}
