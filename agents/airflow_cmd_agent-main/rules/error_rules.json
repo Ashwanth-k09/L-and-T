@@ -1,0 +1,42 @@
+{
+  "externally-managed-environment": {
+    "fix": "use_venv",
+    "message": "System Python blocked package installation"
+  },
+  "pg_config executable not found": {
+    "fix": "install_libpq_dev",
+    "message": "PostgreSQL development package missing"
+  },
+  "No module named 'psycopg2'": {
+    "fix": "install_psycopg2",
+    "message": "Postgres Python driver missing"
+  },
+  "ModuleNotFoundError: No module named 'airflow'": {
+    "fix": "reinstall_airflow",
+    "message": "Airflow is not installed in the active environment"
+  },
+  "connection refused": {
+    "fix": "start_postgres",
+    "message": "PostgreSQL is not running or DB URL is wrong"
+  },
+  "address already in use": {
+    "fix": "change_port",
+    "message": "Selected port is already in use"
+  },
+  "permission denied for schema public": {
+    "fix": "fix_public_schema_privileges",
+    "message": "Airflow database user does not have schema permissions"
+  },
+  "InsufficientPrivilege": {
+    "fix": "fix_public_schema_privileges",
+    "message": "Database privilege problem for Airflow user"
+  },
+  "relation \"job\" does not exist": {
+    "fix": "reset_airflow_db",
+    "message": "Airflow metadata tables are missing"
+  },
+  "UndefinedTable": {
+    "fix": "reset_airflow_db",
+    "message": "Airflow metadata tables are missing"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "ai-agents": {
+      "command": "python",
+      "args": ["/absolute/path/to/mcp_server/server.py"],
+      "env": {
+        "AGENTS_ROOT": "/absolute/path/to/ai_agents"
+      }
+    }
+  }
+}

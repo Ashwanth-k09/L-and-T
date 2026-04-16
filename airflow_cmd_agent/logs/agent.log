@@ -1,0 +1,2566 @@
+
+================================================================================
+2026-03-19T17:09:17.522633
+CMD: python3 --version
+RETURN CODE: 0
+
+STDOUT:
+Python 3.12.3
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:17.950606
+CMD: pip3 --version
+RETURN CODE: 0
+
+STDOUT:
+pip 24.0 from /home/vboxuser/agents/venv/lib/python3.12/site-packages/pip (python 3.12)
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.114668
+CMD: psql --version
+RETURN CODE: 0
+
+STDOUT:
+psql (PostgreSQL) 16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.140936
+CMD: systemctl is-active postgresql || true
+RETURN CODE: 0
+
+STDOUT:
+active
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.147987
+CMD: which airflow || true
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.167738
+CMD: bash -lc 'source ~/airflow_venv/bin/activate 2>/dev/null && airflow version'
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.171294
+CMD: airflow version
+RETURN CODE: 127
+
+STDOUT:
+
+STDERR:
+/bin/bash: line 1: airflow: command not found
+
+
+================================================================================
+2026-03-19T17:09:18.217033
+CMD: dpkg -s python3-pip >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.245254
+CMD: dpkg -s python3-venv >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.266997
+CMD: dpkg -s build-essential >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.287710
+CMD: dpkg -s curl >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.307378
+CMD: dpkg -s libssl-dev >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.330446
+CMD: dpkg -s libffi-dev >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.348960
+CMD: dpkg -s libpq-dev >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.367836
+CMD: dpkg -s postgresql >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.386547
+CMD: dpkg -s postgresql-contrib >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.406722
+CMD: dpkg -s libsasl2-dev >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.425641
+CMD: dpkg -s libsasl2-modules >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.444411
+CMD: dpkg -s libxmlsec1 >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.463137
+CMD: dpkg -s libxmlsec1-dev >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.481651
+CMD: dpkg -s pkg-config >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.500772
+CMD: dpkg -s unixodbc >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.519478
+CMD: dpkg -s unixodbc-dev >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.536022
+CMD: dpkg -s freetds-bin >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.555281
+CMD: dpkg -s freetds-dev >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.575819
+CMD: dpkg -s ldap-utils >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.596128
+CMD: dpkg -s libldap2-dev >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:09:18.623031
+CMD: dpkg -s sqlite3 >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:04.111702
+CMD: sudo apt update && sudo apt install -y libssl-dev libffi-dev libpq-dev libsasl2-dev libxmlsec1 libxmlsec1-dev pkg-config unixodbc unixodbc-dev freetds-bin freetds-dev libldap2-dev sqlite3
+RETURN CODE: 0
+
+STDOUT:
+Hit:1 https://deb.nodesource.com/node_20.x nodistro InRelease
+Hit:2 https://aaddrick.github.io/claude-desktop-debian stable InRelease
+Get:3 https://dl.google.com/linux/chrome/deb stable InRelease [1,825 B]
+Hit:4 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:5 https://artifacts.opensearch.org/releases/bundle/opensearch/2.x/apt stable InRelease
+Get:6 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:7 http://in.archive.ubuntu.com/ubuntu noble InRelease
+Hit:8 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble InRelease
+Get:9 http://in.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:10 https://dl.google.com/linux/chrome/deb stable/main amd64 Packages [1,209 B]
+Get:11 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [21.5 kB]
+Get:12 http://security.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [10.7 kB]
+Get:13 http://in.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:14 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+Get:15 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [74.1 kB]
+Get:16 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+Get:17 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1,839 kB]
+Get:18 http://in.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [338 kB]
+Get:19 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [178 kB]
+Get:20 http://in.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:21 http://in.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1,566 kB]
+Get:22 http://in.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [386 kB]
+Get:23 http://in.archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [33.0 kB]
+Get:24 http://in.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:25 http://in.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7,348 B]
+Get:26 http://in.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:27 http://in.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [13.2 kB]
+Get:28 http://in.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Fetched 4,850 kB in 4s (1,135 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+21 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  freetds-common freetds-doc icu-devtools libct4 libevent-2.1-7t64
+  libgcrypt20-dev libgmp-dev libgmpxx4ldbl libgnutls-dane0t64
+  libgnutls-openssl27t64 libgnutls28-dev libgpg-error-dev libicu-dev
+  libidn2-dev libldap-dev libnspr4-dev libnss3-dev libodbc2 libodbccr2
+  libodbcinst2 libp11-kit-dev libpkgconf3 libsybdb5 libtasn1-6-dev
+  libtasn1-doc libunbound8 libxml2-dev libxmlsec1t64-gcrypt
+  libxmlsec1t64-gnutls libxmlsec1t64-nss libxmlsec1t64-openssl libxslt1-dev
+  nettle-dev pkgconf pkgconf-bin unixodbc-common
+Suggested packages:
+  libgcrypt20-doc gmp-doc libgmp10-doc libmpfr-dev gnutls-bin gnutls-doc
+  icu-doc odbc-postgresql tdsodbc p11-kit-doc postgresql-doc-16 libssl-doc
+  sqlite3-doc
+The following NEW packages will be installed:
+  freetds-bin freetds-common freetds-dev freetds-doc icu-devtools libct4
+  libevent-2.1-7t64 libffi-dev libgcrypt20-dev libgmp-dev libgmpxx4ldbl
+  libgnutls-dane0t64 libgnutls-openssl27t64 libgnutls28-dev libgpg-error-dev
+  libicu-dev libidn2-dev libldap-dev libldap2-dev libnspr4-dev libnss3-dev
+  libodbc2 libodbccr2 libodbcinst2 libp11-kit-dev libpkgconf3 libpq-dev
+  libsasl2-dev libssl-dev libsybdb5 libtasn1-6-dev libtasn1-doc libunbound8
+  libxml2-dev libxmlsec1-dev libxmlsec1t64 libxmlsec1t64-gcrypt
+  libxmlsec1t64-gnutls libxmlsec1t64-nss libxmlsec1t64-openssl libxslt1-dev
+  nettle-dev pkg-config pkgconf pkgconf-bin sqlite3 unixodbc unixodbc-common
+  unixodbc-dev
+0 upgraded, 49 newly installed, 0 to remove and 21 not upgraded.
+Need to get 24.6 MB of archives.
+After this operation, 112 MB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbc2 amd64 2.3.12-1ubuntu0.24.04.1 [158 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu noble/main amd64 freetds-common all 1.3.17+ds-2build3 [26.9 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libsybdb5 amd64 1.3.17+ds-2build3 [192 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu noble/universe amd64 freetds-bin amd64 1.3.17+ds-2build3 [209 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libct4 amd64 1.3.17+ds-2build3 [169 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu noble/main amd64 freetds-dev amd64 1.3.17+ds-2build3 [305 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu noble/main amd64 freetds-doc all 1.3.17+ds-2build3 [1,111 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 icu-devtools amd64 74.2-1ubuntu3.1 [212 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libevent-2.1-7t64 amd64 2.1.12-stable-9ubuntu2 [145 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgpg-error-dev amd64 1.47-3build2.1 [128 kB]
+Get:11 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libgcrypt20-dev amd64 1.10.3-2build1 [592 kB]
+Get:12 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgmpxx4ldbl amd64 2:6.3.0+dfsg-2ubuntu6.1 [9,888 B]
+Get:13 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgmp-dev amd64 2:6.3.0+dfsg-2ubuntu6.1 [340 kB]
+Get:14 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libunbound8 amd64 1.19.2-1ubuntu3.7 [443 kB]
+Get:15 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgnutls-dane0t64 amd64 3.8.3-1.1ubuntu3.5 [23.5 kB]
+Get:16 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgnutls-openssl27t64 amd64 3.8.3-1.1ubuntu3.5 [23.7 kB]
+Get:17 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libidn2-dev amd64 2.3.7-2build1.1 [121 kB]
+Get:18 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libp11-kit-dev amd64 0.25.3-4ubuntu2.1 [22.7 kB]
+Get:19 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libtasn1-6-dev amd64 4.19.0-3ubuntu0.24.04.2 [90.8 kB]
+Get:20 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 nettle-dev amd64 3.9.1-2.2build1.1 [1,154 kB]
+Get:21 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgnutls28-dev amd64 3.8.3-1.1ubuntu3.5 [1,057 kB]
+Get:22 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libicu-dev amd64 74.2-1ubuntu3.1 [11.9 MB]
+Get:23 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap-dev amd64 2.6.10+dfsg-0ubuntu0.24.04.1 [308 kB]
+Get:24 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libnspr4-dev amd64 2:4.35-1.1build1 [219 kB]
+Get:25 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnss3-dev amd64 2:3.98-1ubuntu0.1 [253 kB]
+Get:26 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbccr2 amd64 2.3.12-1ubuntu0.24.04.1 [16.1 kB]
+Get:27 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-common all 2.3.12-1ubuntu0.24.04.1 [8,806 B]
+Get:28 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbcinst2 amd64 2.3.12-1ubuntu0.24.04.1 [30.7 kB]
+Get:29 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libpkgconf3 amd64 1.8.1-2build1 [30.7 kB]
+Get:30 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libssl-dev amd64 3.0.13-0ubuntu3.7 [2,407 kB]
+Get:31 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libpq-dev amd64 16.13-0ubuntu0.24.04.1 [152 kB]
+Get:32 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-dev amd64 2.1.28+dfsg1-5ubuntu3.1 [243 kB]
+Get:33 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libxml2-dev amd64 2.9.14+dfsg-1.3ubuntu3.7 [782 kB]
+Get:34 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libxmlsec1t64 amd64 1.2.39-5build2 [153 kB]
+Get:35 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libxmlsec1t64-gcrypt amd64 1.2.39-5build2 [42.8 kB]
+Get:36 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libxmlsec1t64-gnutls amd64 1.2.39-5build2 [35.0 kB]
+Get:37 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libxmlsec1t64-nss amd64 1.2.39-5build2 [63.0 kB]
+Get:38 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libxmlsec1t64-openssl amd64 1.2.39-5build2 [84.1 kB]
+Get:39 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libxslt1-dev amd64 1.1.39-0exp1ubuntu0.24.04.3 [91.9 kB]
+Get:40 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libxmlsec1-dev amd64 1.2.39-5build2 [435 kB]
+Get:41 http://in.archive.ubuntu.com/ubuntu noble/main amd64 pkgconf-bin amd64 1.8.1-2build1 [20.7 kB]
+Get:42 http://in.archive.ubuntu.com/ubuntu noble/main amd64 pkgconf amd64 1.8.1-2build1 [16.8 kB]
+Get:43 http://in.archive.ubuntu.com/ubuntu noble/main amd64 pkg-config amd64 1.8.1-2build1 [7,264 B]
+Get:44 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 sqlite3 amd64 3.45.1-1ubuntu2.5 [144 kB]
+Get:45 http://in.archive.ubuntu.com/ubuntu noble-updates/universe amd64 unixodbc amd64 2.3.12-1ubuntu0.24.04.1 [27.5 kB]
+Get:46 http://in.archive.ubuntu.com/ubuntu noble/main amd64 libffi-dev amd64 3.4.6-1build1 [62.8 kB]
+Get:47 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2-dev all 2.6.10+dfsg-0ubuntu0.24.04.1 [11.1 kB]
+Get:48 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 libtasn1-doc all 4.19.0-3ubuntu0.24.04.2 [318 kB]
+Get:49 http://in.archive.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-dev amd64 2.3.12-1ubuntu0.24.04.1 [250 kB]
+Fetched 24.6 MB in 4s (6,068 kB/s)
+Selecting previously unselected package libodbc2:amd64.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 222283 files and directories currently installed.)
+Preparing to unpack .../00-libodbc2_2.3.12-1ubuntu0.24.04.1_amd64.deb ...
+Unpacking libodbc2:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+Selecting previously unselected package freetds-common.
+Preparing to unpack .../01-freetds-common_1.3.17+ds-2build3_all.deb ...
+Unpacking freetds-common (1.3.17+ds-2build3) ...
+Selecting previously unselected package libsybdb5:amd64.
+Preparing to unpack .../02-libsybdb5_1.3.17+ds-2build3_amd64.deb ...
+Unpacking libsybdb5:amd64 (1.3.17+ds-2build3) ...
+Selecting previously unselected package freetds-bin.
+Preparing to unpack .../03-freetds-bin_1.3.17+ds-2build3_amd64.deb ...
+Unpacking freetds-bin (1.3.17+ds-2build3) ...
+Selecting previously unselected package libct4:amd64.
+Preparing to unpack .../04-libct4_1.3.17+ds-2build3_amd64.deb ...
+Unpacking libct4:amd64 (1.3.17+ds-2build3) ...
+Selecting previously unselected package freetds-dev.
+Preparing to unpack .../05-freetds-dev_1.3.17+ds-2build3_amd64.deb ...
+Unpacking freetds-dev (1.3.17+ds-2build3) ...
+Selecting previously unselected package freetds-doc.
+Preparing to unpack .../06-freetds-doc_1.3.17+ds-2build3_all.deb ...
+Unpacking freetds-doc (1.3.17+ds-2build3) ...
+Selecting previously unselected package icu-devtools.
+Preparing to unpack .../07-icu-devtools_74.2-1ubuntu3.1_amd64.deb ...
+Unpacking icu-devtools (74.2-1ubuntu3.1) ...
+Selecting previously unselected package libevent-2.1-7t64:amd64.
+Preparing to unpack .../08-libevent-2.1-7t64_2.1.12-stable-9ubuntu2_amd64.deb ...
+Unpacking libevent-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2) ...
+Selecting previously unselected package libgpg-error-dev.
+Preparing to unpack .../09-libgpg-error-dev_1.47-3build2.1_amd64.deb ...
+Unpacking libgpg-error-dev (1.47-3build2.1) ...
+Selecting previously unselected package libgcrypt20-dev.
+Preparing to unpack .../10-libgcrypt20-dev_1.10.3-2build1_amd64.deb ...
+Unpacking libgcrypt20-dev (1.10.3-2build1) ...
+Selecting previously unselected package libgmpxx4ldbl:amd64.
+Preparing to unpack .../11-libgmpxx4ldbl_2%3a6.3.0+dfsg-2ubuntu6.1_amd64.deb ...
+Unpacking libgmpxx4ldbl:amd64 (2:6.3.0+dfsg-2ubuntu6.1) ...
+Selecting previously unselected package libgmp-dev:amd64.
+Preparing to unpack .../12-libgmp-dev_2%3a6.3.0+dfsg-2ubuntu6.1_amd64.deb ...
+Unpacking libgmp-dev:amd64 (2:6.3.0+dfsg-2ubuntu6.1) ...
+Selecting previously unselected package libunbound8:amd64.
+Preparing to unpack .../13-libunbound8_1.19.2-1ubuntu3.7_amd64.deb ...
+Unpacking libunbound8:amd64 (1.19.2-1ubuntu3.7) ...
+Selecting previously unselected package libgnutls-dane0t64:amd64.
+Preparing to unpack .../14-libgnutls-dane0t64_3.8.3-1.1ubuntu3.5_amd64.deb ...
+Unpacking libgnutls-dane0t64:amd64 (3.8.3-1.1ubuntu3.5) ...
+Selecting previously unselected package libgnutls-openssl27t64:amd64.
+Preparing to unpack .../15-libgnutls-openssl27t64_3.8.3-1.1ubuntu3.5_amd64.deb ...
+Unpacking libgnutls-openssl27t64:amd64 (3.8.3-1.1ubuntu3.5) ...
+Selecting previously unselected package libidn2-dev:amd64.
+Preparing to unpack .../16-libidn2-dev_2.3.7-2build1.1_amd64.deb ...
+Unpacking libidn2-dev:amd64 (2.3.7-2build1.1) ...
+Selecting previously unselected package libp11-kit-dev:amd64.
+Preparing to unpack .../17-libp11-kit-dev_0.25.3-4ubuntu2.1_amd64.deb ...
+Unpacking libp11-kit-dev:amd64 (0.25.3-4ubuntu2.1) ...
+Selecting previously unselected package libtasn1-6-dev:amd64.
+Preparing to unpack .../18-libtasn1-6-dev_4.19.0-3ubuntu0.24.04.2_amd64.deb ...
+Unpacking libtasn1-6-dev:amd64 (4.19.0-3ubuntu0.24.04.2) ...
+Selecting previously unselected package nettle-dev:amd64.
+Preparing to unpack .../19-nettle-dev_3.9.1-2.2build1.1_amd64.deb ...
+Unpacking nettle-dev:amd64 (3.9.1-2.2build1.1) ...
+Selecting previously unselected package libgnutls28-dev:amd64.
+Preparing to unpack .../20-libgnutls28-dev_3.8.3-1.1ubuntu3.5_amd64.deb ...
+Unpacking libgnutls28-dev:amd64 (3.8.3-1.1ubuntu3.5) ...
+Selecting previously unselected package libicu-dev:amd64.
+Preparing to unpack .../21-libicu-dev_74.2-1ubuntu3.1_amd64.deb ...
+Unpacking libicu-dev:amd64 (74.2-1ubuntu3.1) ...
+Selecting previously unselected package libldap-dev:amd64.
+Preparing to unpack .../22-libldap-dev_2.6.10+dfsg-0ubuntu0.24.04.1_amd64.deb ...
+Unpacking libldap-dev:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Selecting previously unselected package libnspr4-dev.
+Preparing to unpack .../23-libnspr4-dev_2%3a4.35-1.1build1_amd64.deb ...
+Unpacking libnspr4-dev (2:4.35-1.1build1) ...
+Selecting previously unselected package libnss3-dev:amd64.
+Preparing to unpack .../24-libnss3-dev_2%3a3.98-1ubuntu0.1_amd64.deb ...
+Unpacking libnss3-dev:amd64 (2:3.98-1ubuntu0.1) ...
+Selecting previously unselected package libodbccr2:amd64.
+Preparing to unpack .../25-libodbccr2_2.3.12-1ubuntu0.24.04.1_amd64.deb ...
+Unpacking libodbccr2:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+Selecting previously unselected package unixodbc-common.
+Preparing to unpack .../26-unixodbc-common_2.3.12-1ubuntu0.24.04.1_all.deb ...
+Unpacking unixodbc-common (2.3.12-1ubuntu0.24.04.1) ...
+Selecting previously unselected package libodbcinst2:amd64.
+Preparing to unpack .../27-libodbcinst2_2.3.12-1ubuntu0.24.04.1_amd64.deb ...
+Unpacking libodbcinst2:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+Selecting previously unselected package libpkgconf3:amd64.
+Preparing to unpack .../28-libpkgconf3_1.8.1-2build1_amd64.deb ...
+Unpacking libpkgconf3:amd64 (1.8.1-2build1) ...
+Selecting previously unselected package libssl-dev:amd64.
+Preparing to unpack .../29-libssl-dev_3.0.13-0ubuntu3.7_amd64.deb ...
+Unpacking libssl-dev:amd64 (3.0.13-0ubuntu3.7) ...
+Selecting previously unselected package libpq-dev.
+Preparing to unpack .../30-libpq-dev_16.13-0ubuntu0.24.04.1_amd64.deb ...
+Unpacking libpq-dev (16.13-0ubuntu0.24.04.1) ...
+Selecting previously unselected package libsasl2-dev.
+Preparing to unpack .../31-libsasl2-dev_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+Unpacking libsasl2-dev (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package libxml2-dev:amd64.
+Preparing to unpack .../32-libxml2-dev_2.9.14+dfsg-1.3ubuntu3.7_amd64.deb ...
+Unpacking libxml2-dev:amd64 (2.9.14+dfsg-1.3ubuntu3.7) ...
+Selecting previously unselected package libxmlsec1t64:amd64.
+Preparing to unpack .../33-libxmlsec1t64_1.2.39-5build2_amd64.deb ...
+Unpacking libxmlsec1t64:amd64 (1.2.39-5build2) ...
+Selecting previously unselected package libxmlsec1t64-gcrypt:amd64.
+Preparing to unpack .../34-libxmlsec1t64-gcrypt_1.2.39-5build2_amd64.deb ...
+Unpacking libxmlsec1t64-gcrypt:amd64 (1.2.39-5build2) ...
+Selecting previously unselected package libxmlsec1t64-gnutls:amd64.
+Preparing to unpack .../35-libxmlsec1t64-gnutls_1.2.39-5build2_amd64.deb ...
+Unpacking libxmlsec1t64-gnutls:amd64 (1.2.39-5build2) ...
+Selecting previously unselected package libxmlsec1t64-nss:amd64.
+Preparing to unpack .../36-libxmlsec1t64-nss_1.2.39-5build2_amd64.deb ...
+Unpacking libxmlsec1t64-nss:amd64 (1.2.39-5build2) ...
+Selecting previously unselected package libxmlsec1t64-openssl:amd64.
+Preparing to unpack .../37-libxmlsec1t64-openssl_1.2.39-5build2_amd64.deb ...
+Unpacking libxmlsec1t64-openssl:amd64 (1.2.39-5build2) ...
+Selecting previously unselected package libxslt1-dev:amd64.
+Preparing to unpack .../38-libxslt1-dev_1.1.39-0exp1ubuntu0.24.04.3_amd64.deb ...
+Unpacking libxslt1-dev:amd64 (1.1.39-0exp1ubuntu0.24.04.3) ...
+Selecting previously unselected package libxmlsec1-dev.
+Preparing to unpack .../39-libxmlsec1-dev_1.2.39-5build2_amd64.deb ...
+Unpacking libxmlsec1-dev (1.2.39-5build2) ...
+Selecting previously unselected package pkgconf-bin.
+Preparing to unpack .../40-pkgconf-bin_1.8.1-2build1_amd64.deb ...
+Unpacking pkgconf-bin (1.8.1-2build1) ...
+Selecting previously unselected package pkgconf:amd64.
+Preparing to unpack .../41-pkgconf_1.8.1-2build1_amd64.deb ...
+Unpacking pkgconf:amd64 (1.8.1-2build1) ...
+Selecting previously unselected package pkg-config:amd64.
+Preparing to unpack .../42-pkg-config_1.8.1-2build1_amd64.deb ...
+Unpacking pkg-config:amd64 (1.8.1-2build1) ...
+Selecting previously unselected package sqlite3.
+Preparing to unpack .../43-sqlite3_3.45.1-1ubuntu2.5_amd64.deb ...
+Unpacking sqlite3 (3.45.1-1ubuntu2.5) ...
+Selecting previously unselected package unixodbc.
+Preparing to unpack .../44-unixodbc_2.3.12-1ubuntu0.24.04.1_amd64.deb ...
+Unpacking unixodbc (2.3.12-1ubuntu0.24.04.1) ...
+Selecting previously unselected package libffi-dev:amd64.
+Preparing to unpack .../45-libffi-dev_3.4.6-1build1_amd64.deb ...
+Unpacking libffi-dev:amd64 (3.4.6-1build1) ...
+Selecting previously unselected package libldap2-dev.
+Preparing to unpack .../46-libldap2-dev_2.6.10+dfsg-0ubuntu0.24.04.1_all.deb ...
+Unpacking libldap2-dev (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Selecting previously unselected package libtasn1-doc.
+Preparing to unpack .../47-libtasn1-doc_4.19.0-3ubuntu0.24.04.2_all.deb ...
+Unpacking libtasn1-doc (4.19.0-3ubuntu0.24.04.2) ...
+Selecting previously unselected package unixodbc-dev:amd64.
+Preparing to unpack .../48-unixodbc-dev_2.3.12-1ubuntu0.24.04.1_amd64.deb ...
+Unpacking unixodbc-dev:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+Setting up libnspr4-dev (2:4.35-1.1build1) ...
+Setting up libgnutls-openssl27t64:amd64 (3.8.3-1.1ubuntu3.5) ...
+Setting up freetds-doc (1.3.17+ds-2build3) ...
+Setting up libtasn1-doc (4.19.0-3ubuntu0.24.04.2) ...
+Setting up libevent-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2) ...
+Setting up libxmlsec1t64:amd64 (1.2.39-5build2) ...
+Setting up libffi-dev:amd64 (3.4.6-1build1) ...
+Setting up libxmlsec1t64-nss:amd64 (1.2.39-5build2) ...
+Setting up libunbound8:amd64 (1.19.2-1ubuntu3.7) ...
+Setting up libpkgconf3:amd64 (1.8.1-2build1) ...
+Setting up libgmpxx4ldbl:amd64 (2:6.3.0+dfsg-2ubuntu6.1) ...
+Setting up libgnutls-dane0t64:amd64 (3.8.3-1.1ubuntu3.5) ...
+Setting up libgpg-error-dev (1.47-3build2.1) ...
+Setting up libxmlsec1t64-openssl:amd64 (1.2.39-5build2) ...
+Setting up libldap-dev:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Setting up libssl-dev:amd64 (3.0.13-0ubuntu3.7) ...
+Setting up icu-devtools (74.2-1ubuntu3.1) ...
+Setting up unixodbc-common (2.3.12-1ubuntu0.24.04.1) ...
+Setting up pkgconf-bin (1.8.1-2build1) ...
+Setting up libidn2-dev:amd64 (2.3.7-2build1.1) ...
+Setting up libodbc2:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+Setting up libnss3-dev:amd64 (2:3.98-1ubuntu0.1) ...
+Setting up freetds-common (1.3.17+ds-2build3) ...
+Setting up libxmlsec1t64-gcrypt:amd64 (1.2.39-5build2) ...
+Setting up libtasn1-6-dev:amd64 (4.19.0-3ubuntu0.24.04.2) ...
+Setting up libicu-dev:amd64 (74.2-1ubuntu3.1) ...
+Setting up sqlite3 (3.45.1-1ubuntu2.5) ...
+Setting up libp11-kit-dev:amd64 (0.25.3-4ubuntu2.1) ...
+Setting up libodbccr2:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+Setting up libodbcinst2:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+Setting up libgmp-dev:amd64 (2:6.3.0+dfsg-2ubuntu6.1) ...
+Setting up unixodbc (2.3.12-1ubuntu0.24.04.1) ...
+Setting up nettle-dev:amd64 (3.9.1-2.2build1.1) ...
+Setting up libsybdb5:amd64 (1.3.17+ds-2build3) ...
+Setting up libpq-dev (16.13-0ubuntu0.24.04.1) ...
+Setting up libxmlsec1t64-gnutls:amd64 (1.2.39-5build2) ...
+Setting up pkgconf:amd64 (1.8.1-2build1) ...
+Setting up libldap2-dev (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Setting up libxml2-dev:amd64 (2.9.14+dfsg-1.3ubuntu3.7) ...
+Setting up libsasl2-dev (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up libgcrypt20-dev (1.10.3-2build1) ...
+Setting up freetds-bin (1.3.17+ds-2build3) ...
+Setting up libct4:amd64 (1.3.17+ds-2build3) ...
+Setting up pkg-config:amd64 (1.8.1-2build1) ...
+Setting up unixodbc-dev:amd64 (2.3.12-1ubuntu0.24.04.1) ...
+Setting up libgnutls28-dev:amd64 (3.8.3-1.1ubuntu3.5) ...
+Setting up libxslt1-dev:amd64 (1.1.39-0exp1ubuntu0.24.04.3) ...
+Setting up freetds-dev (1.3.17+ds-2build3) ...
+Setting up libxmlsec1-dev (1.2.39-5build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for install-info (7.1-3build2) ...
+
+STDERR:
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+
+
+================================================================================
+2026-03-19T17:10:06.068393
+CMD: sudo systemctl enable --now postgresql
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+Synchronizing state of postgresql.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable postgresql
+
+
+================================================================================
+2026-03-19T17:10:06.399639
+CMD: sudo -u postgres psql -tc "SELECT 1 FROM pg_database WHERE datname='airflow'" | grep -q 1 || sudo -u postgres psql -c "CREATE DATABASE airflow;"
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:06.823441
+CMD: sudo -u postgres psql -tc "SELECT 1 FROM pg_roles WHERE rolname='airflow'" | grep -q 1 || sudo -u postgres psql -c "CREATE USER airflow WITH PASSWORD 'airflow';"
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:07.003657
+CMD: sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE airflow TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+GRANT
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:12.777985
+CMD: python3 -m venv ~/airflow_venv
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:17.352055
+CMD: bash -lc 'source ~/airflow_venv/bin/activate && python -m pip install --upgrade pip setuptools wheel'
+RETURN CODE: 0
+
+STDOUT:
+Requirement already satisfied: pip in /home/vboxuser/airflow_venv/lib/python3.12/site-packages (24.0)
+Collecting pip
+  Using cached pip-26.0.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting setuptools
+  Downloading setuptools-82.0.1-py3-none-any.whl.metadata (6.5 kB)
+Collecting wheel
+  Downloading wheel-0.46.3-py3-none-any.whl.metadata (2.4 kB)
+Collecting packaging>=24.0 (from wheel)
+  Using cached packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Using cached pip-26.0.1-py3-none-any.whl (1.8 MB)
+Downloading setuptools-82.0.1-py3-none-any.whl (1.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 7.8 MB/s eta 0:00:00
+Downloading wheel-0.46.3-py3-none-any.whl (30 kB)
+Using cached packaging-26.0-py3-none-any.whl (74 kB)
+Installing collected packages: setuptools, pip, packaging, wheel
+  Attempting uninstall: pip
+    Found existing installation: pip 24.0
+    Uninstalling pip-24.0:
+      Successfully uninstalled pip-24.0
+Successfully installed packaging-26.0 pip-26.0.1 setuptools-82.0.1 wheel-0.46.3
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:46.361609
+CMD: bash -lc 'source ~/airflow_venv/bin/activate && python -m pip install "apache-airflow[postgres]==2.10.5" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.10.5/constraints-3.12.txt"'
+RETURN CODE: 0
+
+STDOUT:
+Collecting apache-airflow==2.10.5 (from apache-airflow[postgres]==2.10.5)
+  Downloading apache_airflow-2.10.5-py3-none-any.whl.metadata (45 kB)
+Collecting alembic<2.0,>=1.13.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading alembic-1.14.1-py3-none-any.whl.metadata (7.4 kB)
+Collecting argcomplete>=1.10 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading argcomplete-3.5.3-py3-none-any.whl.metadata (16 kB)
+Collecting asgiref>=2.3.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached asgiref-3.8.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting attrs>=22.1.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading attrs-25.1.0-py3-none-any.whl.metadata (10 kB)
+Collecting blinker>=1.6.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting colorlog>=6.8.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading colorlog-6.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting configupdater>=3.1.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached ConfigUpdater-3.2-py2.py3-none-any.whl.metadata (10 kB)
+Collecting connexion<3.0,>=2.14.2 (from connexion[flask]<3.0,>=2.14.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached connexion-2.14.2-py2.py3-none-any.whl.metadata (28 kB)
+Collecting cron-descriptor>=1.2.24 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached cron_descriptor-1.4.5-py3-none-any.whl.metadata (5.7 kB)
+Collecting croniter>=2.0.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading croniter-6.0.0-py2.py3-none-any.whl.metadata (32 kB)
+Collecting cryptography>=41.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached cryptography-42.0.8-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Collecting deprecated>=1.2.13 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading Deprecated-1.2.18-py2.py3-none-any.whl.metadata (5.7 kB)
+Collecting dill>=0.2.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading dill-0.3.9-py3-none-any.whl.metadata (10 kB)
+Collecting flask-caching>=2.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask_Caching-2.3.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting flask-session<0.6,>=0.4.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached flask_session-0.5.0-py3-none-any.whl.metadata (1.4 kB)
+Collecting flask-wtf>=1.1.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading flask_wtf-1.2.2-py3-none-any.whl.metadata (3.4 kB)
+Collecting flask<2.3,>=2.2.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask-2.2.5-py3-none-any.whl.metadata (3.9 kB)
+Collecting fsspec>=2023.10.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading fsspec-2025.2.0-py3-none-any.whl.metadata (11 kB)
+Collecting google-re2>=1.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached google_re2-1.1.20240702-1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (2.2 kB)
+Collecting gunicorn>=20.1.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting httpx>=0.25.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached httpx-0.27.0-py3-none-any.whl.metadata (7.2 kB)
+Collecting itsdangerous>=2.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading jinja2-3.1.5-py3-none-any.whl.metadata (2.6 kB)
+Collecting jsonschema>=4.18.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting lazy-object-proxy>=1.2.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached lazy_object_proxy-1.10.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.8 kB)
+Collecting linkify-it-py>=2.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached linkify_it_py-2.0.3-py3-none-any.whl.metadata (8.5 kB)
+Collecting lockfile>=0.12.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+Collecting markdown-it-py>=2.1.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting markupsafe>=1.1.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading MarkupSafe-3.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting marshmallow-oneofschema>=2.0.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached marshmallow_oneofschema-3.1.1-py3-none-any.whl.metadata (5.0 kB)
+Collecting mdit-py-plugins>=0.3.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached mdit_py_plugins-0.4.2-py3-none-any.whl.metadata (2.8 kB)
+Collecting methodtools>=0.4.7 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached methodtools-0.4.7-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting opentelemetry-api>=1.24.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_api-1.27.0-py3-none-any.whl.metadata (1.4 kB)
+Collecting opentelemetry-exporter-otlp>=1.24.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_exporter_otlp-1.27.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting packaging>=23.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pathspec>=0.9.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Collecting pendulum<4.0,>=3.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached pendulum-3.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.9 kB)
+Collecting pluggy>=1.5.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached pluggy-1.5.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting psutil>=5.8.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading psutil-6.1.1-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+Collecting pygments>=2.0.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading pygments-2.19.1-py3-none-any.whl.metadata (2.5 kB)
+Collecting pyjwt>=2.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting python-daemon>=3.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading python_daemon-3.1.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting python-dateutil>=2.7.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting python-nvd3>=0.15.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached python_nvd3-0.16.0-py3-none-any.whl
+Collecting python-slugify>=5.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached python_slugify-8.0.4-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting requests<3,>=2.27.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting requests-toolbelt>=0.4.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Collecting rfc3339-validator>=0.1.4 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting rich-argparse>=1.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading rich_argparse-1.6.0-py3-none-any.whl.metadata (14 kB)
+Collecting rich>=12.4.4 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading rich-13.9.4-py3-none-any.whl.metadata (18 kB)
+Collecting setproctitle>=1.3.3 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading setproctitle-1.3.4-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+Collecting sqlalchemy<2.0,>=1.4.36 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading SQLAlchemy-1.4.54-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+Collecting sqlalchemy-jsonfield>=1.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached SQLAlchemy_JSONField-1.0.2-py3-none-any.whl.metadata (5.2 kB)
+Collecting tabulate>=0.7.5 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+Collecting tenacity!=8.2.0,>=8.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading tenacity-9.0.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting termcolor>=1.1.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading termcolor-2.5.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting universal-pathlib!=0.2.4,>=0.2.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading universal_pathlib-0.2.6-py3-none-any.whl.metadata (25 kB)
+Collecting werkzeug<3,>=2.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Werkzeug-2.2.3-py3-none-any.whl.metadata (4.4 kB)
+Collecting apache-airflow-providers-common-compat (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading apache_airflow_providers_common_compat-1.3.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting apache-airflow-providers-common-io (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading apache_airflow_providers_common_io-1.5.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting apache-airflow-providers-common-sql (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading apache_airflow_providers_common_sql-1.21.0-py3-none-any.whl.metadata (6.2 kB)
+Collecting apache-airflow-providers-fab>=1.0.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading apache_airflow_providers_fab-1.5.2-py3-none-any.whl.metadata (6.6 kB)
+Collecting apache-airflow-providers-ftp (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading apache_airflow_providers_ftp-3.12.0-py3-none-any.whl.metadata (6.0 kB)
+Collecting apache-airflow-providers-http (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading apache_airflow_providers_http-5.0.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting apache-airflow-providers-imap (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading apache_airflow_providers_imap-3.8.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting apache-airflow-providers-smtp (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading apache_airflow_providers_smtp-1.9.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting apache-airflow-providers-sqlite (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading apache_airflow_providers_sqlite-4.0.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting apache-airflow-providers-postgres (from apache-airflow[postgres]==2.10.5)
+  Downloading apache_airflow_providers_postgres-6.0.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting Mako (from alembic<2.0,>=1.13.1->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading Mako-1.3.8-py3-none-any.whl.metadata (2.9 kB)
+Collecting typing-extensions>=4 (from alembic<2.0,>=1.13.1->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting clickclick<21,>=1.2 (from connexion<3.0,>=2.14.2->connexion[flask]<3.0,>=2.14.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached clickclick-20.10.2-py2.py3-none-any.whl.metadata (7.6 kB)
+Collecting PyYAML<7,>=5.1 (from connexion<3.0,>=2.14.2->connexion[flask]<3.0,>=2.14.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting inflection<0.6,>=0.3.1 (from connexion<3.0,>=2.14.2->connexion[flask]<3.0,>=2.14.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached inflection-0.5.1-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting click>=4.0 (from clickclick<21,>=1.2->connexion<3.0,>=2.14.2->connexion[flask]<3.0,>=2.14.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+Collecting cachelib (from flask-session<0.6,>=0.4.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached cachelib-0.9.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.18.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading jsonschema_specifications-2024.10.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.18.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading referencing-0.36.2-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema>=4.18.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading rpds_py-0.22.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting tzdata>=2020.1 (from pendulum<4.0,>=3.0.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading tzdata-2025.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting time-machine>=2.6.0 (from pendulum<4.0,>=3.0.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading time_machine-2.16.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting charset-normalizer<4,>=2 (from requests<3,>=2.27.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading charset_normalizer-3.4.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Collecting idna<4,>=2.5 (from requests<3,>=2.27.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting urllib3<3,>=1.21.1 (from requests<3,>=2.27.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests<3,>=2.27.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting greenlet!=0.4.17 (from sqlalchemy<2.0,>=1.4.36->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading greenlet-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Collecting flask-appbuilder==4.5.2 (from apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading Flask_AppBuilder-4.5.2-py3-none-any.whl.metadata (8.9 kB)
+Collecting flask-login>=0.6.2 (from apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask_Login-0.6.3-py3-none-any.whl.metadata (5.8 kB)
+Collecting jmespath>=0.7.0 (from apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached jmespath-0.10.0-py2.py3-none-any.whl.metadata (8.0 kB)
+Collecting apispec<7,>=6.0.0 (from apispec[yaml]<7,>=6.0.0->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading apispec-6.8.1-py3-none-any.whl.metadata (10 kB)
+Collecting colorama<1,>=0.3.9 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting email-validator>=1.0.5 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached email_validator-2.2.0-py3-none-any.whl.metadata (25 kB)
+Collecting Flask-Babel<3,>=1 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask_Babel-2.0.0-py3-none-any.whl.metadata (2.1 kB)
+Collecting Flask-Limiter<4,>3 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading Flask_Limiter-3.10.1-py3-none-any.whl.metadata (6.1 kB)
+Collecting Flask-SQLAlchemy<3,>=2.4 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl.metadata (3.1 kB)
+Collecting Flask-JWT-Extended<5.0.0,>=4.0.0 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading Flask_JWT_Extended-4.7.1-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting marshmallow<4,>=3.18.0 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading marshmallow-3.26.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting marshmallow-sqlalchemy<0.29.0,>=0.22.0 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached marshmallow_sqlalchemy-0.28.2-py2.py3-none-any.whl.metadata (6.8 kB)
+Collecting prison<1.0.0,>=0.2.1 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached prison-0.2.1-py2.py3-none-any.whl.metadata (973 bytes)
+Collecting sqlalchemy-utils<1,>=0.32.21 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached SQLAlchemy_Utils-0.41.2-py3-none-any.whl.metadata (4.2 kB)
+Collecting WTForms<4 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading wtforms-3.2.1-py3-none-any.whl.metadata (5.3 kB)
+Collecting pytz (from Flask-Babel<3,>=1->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading pytz-2025.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting Babel>=2.3 (from Flask-Babel<3,>=1->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading babel-2.17.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting limits>=3.13 (from Flask-Limiter<4,>3->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading limits-4.0.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting ordered-set<5,>4 (from Flask-Limiter<4,>3->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached ordered_set-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+Collecting six (from prison<1.0.0,>=0.2.1->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting cffi>=1.12 (from cryptography>=41.0.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting pycparser (from cffi>=1.12->cryptography>=41.0.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Collecting wrapt<2,>=1.10 (from deprecated>=1.2.13->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading wrapt-1.17.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+Collecting dnspython>=2.0.0 (from email-validator>=1.0.5->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading dnspython-2.7.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting anyio (from httpx>=0.25.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading anyio-4.8.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting httpcore==1.* (from httpx>=0.25.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading httpcore-1.0.7-py3-none-any.whl.metadata (21 kB)
+Collecting sniffio (from httpx>=0.25.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting h11<0.15,>=0.13 (from httpcore==1.*->httpx>=0.25.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting uc-micro-py (from linkify-it-py>=2.0.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached uc_micro_py-1.0.3-py3-none-any.whl.metadata (2.0 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.1.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting wirerope>=0.4.7 (from methodtools>=0.4.7->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading wirerope-1.0.0-py2.py3-none-any.whl.metadata (3.3 kB)
+Collecting importlib-metadata<=8.4.0,>=6.0 (from opentelemetry-api>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached importlib_metadata-6.11.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting zipp>=0.5 (from importlib-metadata<=8.4.0,>=6.0->opentelemetry-api>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading zipp-3.21.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting opentelemetry-exporter-otlp-proto-grpc==1.27.0 (from opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_exporter_otlp_proto_grpc-1.27.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting opentelemetry-exporter-otlp-proto-http==1.27.0 (from opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_exporter_otlp_proto_http-1.27.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting googleapis-common-protos~=1.52 (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading googleapis_common_protos-1.66.0-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting grpcio<2.0.0,>=1.0.0 (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading grpcio-1.70.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.9 kB)
+Collecting opentelemetry-exporter-otlp-proto-common==1.27.0 (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_exporter_otlp_proto_common-1.27.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting opentelemetry-proto==1.27.0 (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_proto-1.27.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting opentelemetry-sdk~=1.27.0 (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_sdk-1.27.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting protobuf<5.0,>=3.19 (from opentelemetry-proto==1.27.0->opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading protobuf-4.25.6-cp37-abi3-manylinux2014_x86_64.whl.metadata (541 bytes)
+Collecting opentelemetry-semantic-conventions==0.48b0 (from opentelemetry-sdk~=1.27.0->opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_semantic_conventions-0.48b0-py3-none-any.whl.metadata (2.4 kB)
+Collecting text-unidecode>=1.3 (from python-slugify>=5.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+Collecting more-itertools>=9.0.0 (from apache-airflow-providers-common-sql->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading more_itertools-10.6.0-py3-none-any.whl.metadata (37 kB)
+Collecting sqlparse>=0.5.1 (from apache-airflow-providers-common-sql->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting aiohttp!=3.11.0,>=3.9.2 (from apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading aiohttp-3.11.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+Collecting aiohappyeyeballs>=2.3.0 (from aiohttp!=3.11.0,>=3.9.2->apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading aiohappyeyeballs-2.4.4-py3-none-any.whl.metadata (6.1 kB)
+Collecting aiosignal>=1.1.2 (from aiohttp!=3.11.0,>=3.9.2->apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading aiosignal-1.3.2-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp!=3.11.0,>=3.9.2->apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading frozenlist-1.5.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp!=3.11.0,>=3.9.2->apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading multidict-6.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.0 kB)
+Collecting propcache>=0.2.0 (from aiohttp!=3.11.0,>=3.9.2->apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading propcache-0.2.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.2 kB)
+Collecting yarl<2.0,>=1.17.0 (from aiohttp!=3.11.0,>=3.9.2->apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading yarl-1.18.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (69 kB)
+Collecting asyncpg>=0.30.0 (from apache-airflow-providers-postgres->apache-airflow[postgres]==2.10.5)
+  Downloading asyncpg-0.30.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.0 kB)
+Collecting psycopg2-binary>=2.9.4 (from apache-airflow-providers-postgres->apache-airflow[postgres]==2.10.5)
+  Downloading psycopg2_binary-2.9.10-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting aiosqlite>=0.20.0 (from apache-airflow-providers-sqlite->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Downloading aiosqlite-0.20.0-py3-none-any.whl.metadata (4.3 kB)
+Downloading apache_airflow-2.10.5-py3-none-any.whl (13.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.4/13.4 MB 34.6 MB/s  0:00:00
+Downloading alembic-1.14.1-py3-none-any.whl (233 kB)
+Using cached connexion-2.14.2-py2.py3-none-any.whl (95 kB)
+Using cached clickclick-20.10.2-py2.py3-none-any.whl (7.4 kB)
+Using cached Flask-2.2.5-py3-none-any.whl (101 kB)
+Using cached flask_session-0.5.0-py3-none-any.whl (7.2 kB)
+Using cached inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+Using cached jsonschema-4.23.0-py3-none-any.whl (88 kB)
+Using cached pendulum-3.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (384 kB)
+Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (767 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 767.5/767.5 kB 27.4 MB/s  0:00:00
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (145 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Downloading SQLAlchemy-1.4.54-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 33.1 MB/s  0:00:00
+Downloading urllib3-2.3.0-py3-none-any.whl (128 kB)
+Using cached Werkzeug-2.2.3-py3-none-any.whl (233 kB)
+Downloading apache_airflow_providers_fab-1.5.2-py3-none-any.whl (97 kB)
+Downloading Flask_AppBuilder-4.5.2-py3-none-any.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 34.5 MB/s  0:00:00
+Downloading apispec-6.8.1-py3-none-any.whl (30 kB)
+Downloading click-8.1.8-py3-none-any.whl (98 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Using cached Flask_Babel-2.0.0-py3-none-any.whl (9.3 kB)
+Downloading Flask_JWT_Extended-4.7.1-py2.py3-none-any.whl (22 kB)
+Downloading Flask_Limiter-3.10.1-py3-none-any.whl (28 kB)
+Using cached Flask_Login-0.6.3-py3-none-any.whl (17 kB)
+Using cached Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB)
+Downloading flask_wtf-1.2.2-py3-none-any.whl (12 kB)
+Downloading marshmallow-3.26.0-py3-none-any.whl (50 kB)
+Using cached marshmallow_sqlalchemy-0.28.2-py2.py3-none-any.whl (16 kB)
+Using cached ordered_set-4.1.0-py3-none-any.whl (7.6 kB)
+Using cached prison-0.2.1-py2.py3-none-any.whl (5.8 kB)
+Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading rich-13.9.4-py3-none-any.whl (242 kB)
+Downloading pygments-2.19.1-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 28.3 MB/s  0:00:00
+Using cached SQLAlchemy_Utils-0.41.2-py3-none-any.whl (93 kB)
+Downloading wtforms-3.2.1-py3-none-any.whl (152 kB)
+Downloading apache_airflow_providers_common_compat-1.3.0-py3-none-any.whl (24 kB)
+Downloading argcomplete-3.5.3-py3-none-any.whl (43 kB)
+Using cached asgiref-3.8.1-py3-none-any.whl (23 kB)
+Downloading attrs-25.1.0-py3-none-any.whl (63 kB)
+Downloading babel-2.17.0-py3-none-any.whl (10.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 42.0 MB/s  0:00:00
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading certifi-2025.1.31-py3-none-any.whl (166 kB)
+Downloading colorlog-6.9.0-py3-none-any.whl (11 kB)
+Using cached ConfigUpdater-3.2-py2.py3-none-any.whl (34 kB)
+Using cached cron_descriptor-1.4.5-py3-none-any.whl (50 kB)
+Downloading croniter-6.0.0-py2.py3-none-any.whl (25 kB)
+Using cached cryptography-42.0.8-cp39-abi3-manylinux_2_28_x86_64.whl (3.9 MB)
+Downloading cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (479 kB)
+Downloading Deprecated-1.2.18-py2.py3-none-any.whl (10.0 kB)
+Downloading wrapt-1.17.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (89 kB)
+Downloading dill-0.3.9-py3-none-any.whl (119 kB)
+Using cached email_validator-2.2.0-py3-none-any.whl (33 kB)
+Downloading dnspython-2.7.0-py3-none-any.whl (313 kB)
+Using cached Flask_Caching-2.3.0-py3-none-any.whl (28 kB)
+Using cached cachelib-0.9.0-py3-none-any.whl (15 kB)
+Downloading fsspec-2025.2.0-py3-none-any.whl (184 kB)
+Using cached google_re2-1.1.20240702-1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (546 kB)
+Downloading greenlet-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (613 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 613.1/613.1 kB 28.9 MB/s  0:00:00
+Using cached gunicorn-23.0.0-py3-none-any.whl (85 kB)
+Using cached httpx-0.27.0-py3-none-any.whl (75 kB)
+Downloading httpcore-1.0.7-py3-none-any.whl (78 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.5-py3-none-any.whl (134 kB)
+Using cached jmespath-0.10.0-py2.py3-none-any.whl (24 kB)
+Downloading jsonschema_specifications-2024.10.1-py3-none-any.whl (18 kB)
+Using cached lazy_object_proxy-1.10.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (72 kB)
+Downloading limits-4.0.1-py3-none-any.whl (45 kB)
+Downloading packaging-24.2-py3-none-any.whl (65 kB)
+Using cached linkify_it_py-2.0.3-py3-none-any.whl (19 kB)
+Using cached lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading MarkupSafe-3.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (23 kB)
+Using cached marshmallow_oneofschema-3.1.1-py3-none-any.whl (5.7 kB)
+Using cached mdit_py_plugins-0.4.2-py3-none-any.whl (55 kB)
+Using cached methodtools-0.4.7-py2.py3-none-any.whl (4.0 kB)
+Using cached opentelemetry_api-1.27.0-py3-none-any.whl (63 kB)
+Using cached importlib_metadata-6.11.0-py3-none-any.whl (23 kB)
+Using cached opentelemetry_exporter_otlp-1.27.0-py3-none-any.whl (7.0 kB)
+Using cached opentelemetry_exporter_otlp_proto_grpc-1.27.0-py3-none-any.whl (18 kB)
+Using cached opentelemetry_exporter_otlp_proto_common-1.27.0-py3-none-any.whl (17 kB)
+Using cached opentelemetry_exporter_otlp_proto_http-1.27.0-py3-none-any.whl (17 kB)
+Using cached opentelemetry_proto-1.27.0-py3-none-any.whl (52 kB)
+Downloading googleapis_common_protos-1.66.0-py2.py3-none-any.whl (221 kB)
+Downloading grpcio-1.70.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.9/5.9 MB 17.1 MB/s  0:00:00
+Using cached opentelemetry_sdk-1.27.0-py3-none-any.whl (110 kB)
+Using cached opentelemetry_semantic_conventions-0.48b0-py3-none-any.whl (149 kB)
+Downloading protobuf-4.25.6-cp37-abi3-manylinux2014_x86_64.whl (294 kB)
+Using cached pathspec-0.12.1-py3-none-any.whl (31 kB)
+Using cached pluggy-1.5.0-py3-none-any.whl (20 kB)
+Downloading psutil-6.1.1-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (287 kB)
+Downloading python_daemon-3.1.2-py3-none-any.whl (30 kB)
+Using cached python_slugify-8.0.4-py2.py3-none-any.whl (10 kB)
+Downloading pytz-2025.1-py2.py3-none-any.whl (507 kB)
+Downloading referencing-0.36.2-py3-none-any.whl (26 kB)
+Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+Using cached rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Downloading rich_argparse-1.6.0-py3-none-any.whl (20 kB)
+Downloading rpds_py-0.22.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (385 kB)
+Downloading setproctitle-1.3.4-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (31 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached SQLAlchemy_JSONField-1.0.2-py3-none-any.whl (10 kB)
+Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+Downloading tenacity-9.0.0-py3-none-any.whl (28 kB)
+Downloading termcolor-2.5.0-py3-none-any.whl (7.8 kB)
+Using cached text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+Downloading time_machine-2.16.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (33 kB)
+Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Downloading tzdata-2025.1-py2.py3-none-any.whl (346 kB)
+Downloading universal_pathlib-0.2.6-py3-none-any.whl (50 kB)
+Downloading wirerope-1.0.0-py2.py3-none-any.whl (9.2 kB)
+Downloading zipp-3.21.0-py3-none-any.whl (9.6 kB)
+Downloading anyio-4.8.0-py3-none-any.whl (96 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading apache_airflow_providers_common_io-1.5.0-py3-none-any.whl (19 kB)
+Downloading apache_airflow_providers_common_sql-1.21.0-py3-none-any.whl (49 kB)
+Downloading more_itertools-10.6.0-py3-none-any.whl (63 kB)
+Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Downloading apache_airflow_providers_ftp-3.12.0-py3-none-any.whl (19 kB)
+Downloading apache_airflow_providers_http-5.0.0-py3-none-any.whl (27 kB)
+Downloading aiohttp-3.11.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 34.5 MB/s  0:00:00
+Downloading multidict-6.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (131 kB)
+Downloading yarl-1.18.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (336 kB)
+Downloading aiohappyeyeballs-2.4.4-py3-none-any.whl (14 kB)
+Downloading aiosignal-1.3.2-py2.py3-none-any.whl (7.6 kB)
+Downloading frozenlist-1.5.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (283 kB)
+Downloading propcache-0.2.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (243 kB)
+Downloading apache_airflow_providers_imap-3.8.0-py3-none-any.whl (17 kB)
+Downloading apache_airflow_providers_postgres-6.0.0-py3-none-any.whl (18 kB)
+Downloading asyncpg-0.30.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 41.2 MB/s  0:00:00
+Downloading psycopg2_binary-2.9.10-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 29.5 MB/s  0:00:00
+Downloading apache_airflow_providers_smtp-1.9.0-py3-none-any.whl (22 kB)
+Downloading apache_airflow_providers_sqlite-4.0.0-py3-none-any.whl (12 kB)
+Downloading aiosqlite-0.20.0-py3-none-any.whl (15 kB)
+Downloading Mako-1.3.8-py3-none-any.whl (78 kB)
+Using cached pycparser-2.22-py3-none-any.whl (117 kB)
+Using cached uc_micro_py-1.0.3-py3-none-any.whl (6.2 kB)
+Installing collected packages: text-unidecode, pytz, lockfile, cron-descriptor, zipp, wrapt, urllib3, uc-micro-py, tzdata, typing-extensions, termcolor, tenacity, tabulate, sqlparse, sniffio, six, setproctitle, rpds-py, PyYAML, python-slugify, python-daemon, pyjwt, pygments, pycparser, psycopg2-binary, psutil, protobuf, propcache, pluggy, pathspec, packaging, ordered-set, multidict, more-itertools, mdurl, markupsafe, lazy-object-proxy, jmespath, itsdangerous, inflection, idna, h11, grpcio, greenlet, google-re2, fsspec, frozenlist, dnspython, dill, configupdater, colorlog, colorama, click, charset-normalizer, certifi, cachelib, blinker, Babel, attrs, asyncpg, asgiref, argcomplete, aiohappyeyeballs, yarl, WTForms, wirerope, werkzeug, universal-pathlib, sqlalchemy, rfc3339-validator, requests, referencing, python-dateutil, prison, opentelemetry-proto, marshmallow, markdown-it-py, Mako, linkify-it-py, jinja2, importlib-metadata, httpcore, gunicorn, googleapis-common-protos, email-validator, deprecated, clickclick, cffi, apispec, anyio, aiosqlite, aiosignal, time-machine, sqlalchemy-utils, sqlalchemy-jsonfield, rich, requests-toolbelt, python-nvd3, opentelemetry-exporter-otlp-proto-common, opentelemetry-api, methodtools, mdit-py-plugins, marshmallow-sqlalchemy, marshmallow-oneofschema, limits, jsonschema-specifications, httpx, flask, cryptography, croniter, alembic, aiohttp, rich-argparse, pendulum, opentelemetry-semantic-conventions, jsonschema, flask-wtf, Flask-SQLAlchemy, flask-session, flask-login, Flask-Limiter, Flask-JWT-Extended, flask-caching, Flask-Babel, opentelemetry-sdk, flask-appbuilder, connexion, opentelemetry-exporter-otlp-proto-http, opentelemetry-exporter-otlp-proto-grpc, opentelemetry-exporter-otlp, apache-airflow-providers-common-sql, apache-airflow-providers-common-compat, apache-airflow-providers-sqlite, apache-airflow-providers-smtp, apache-airflow-providers-imap, apache-airflow-providers-http, apache-airflow-providers-ftp, apache-airflow-providers-fab, apache-airflow-providers-common-io, apache-airflow, apache-airflow-providers-postgres
+  Attempting uninstall: packaging
+    Found existing installation: packaging 26.0
+    Uninstalling packaging-26.0:
+      Successfully uninstalled packaging-26.0
+
+Successfully installed Babel-2.17.0 Flask-Babel-2.0.0 Flask-JWT-Extended-4.7.1 Flask-Limiter-3.10.1 Flask-SQLAlchemy-2.5.1 Mako-1.3.8 PyYAML-6.0.2 WTForms-3.2.1 aiohappyeyeballs-2.4.4 aiohttp-3.11.11 aiosignal-1.3.2 aiosqlite-0.20.0 alembic-1.14.1 anyio-4.8.0 apache-airflow-2.10.5 apache-airflow-providers-common-compat-1.3.0 apache-airflow-providers-common-io-1.5.0 apache-airflow-providers-common-sql-1.21.0 apache-airflow-providers-fab-1.5.2 apache-airflow-providers-ftp-3.12.0 apache-airflow-providers-http-5.0.0 apache-airflow-providers-imap-3.8.0 apache-airflow-providers-postgres-6.0.0 apache-airflow-providers-smtp-1.9.0 apache-airflow-providers-sqlite-4.0.0 apispec-6.8.1 argcomplete-3.5.3 asgiref-3.8.1 asyncpg-0.30.0 attrs-25.1.0 blinker-1.9.0 cachelib-0.9.0 certifi-2025.1.31 cffi-1.17.1 charset-normalizer-3.4.1 click-8.1.8 clickclick-20.10.2 colorama-0.4.6 colorlog-6.9.0 configupdater-3.2 connexion-2.14.2 cron-descriptor-1.4.5 croniter-6.0.0 cryptography-42.0.8 deprecated-1.2.18 dill-0.3.9 dnspython-2.7.0 email-validator-2.2.0 flask-2.2.5 flask-appbuilder-4.5.2 flask-caching-2.3.0 flask-login-0.6.3 flask-session-0.5.0 flask-wtf-1.2.2 frozenlist-1.5.0 fsspec-2025.2.0 google-re2-1.1.20240702 googleapis-common-protos-1.66.0 greenlet-3.1.1 grpcio-1.70.0 gunicorn-23.0.0 h11-0.14.0 httpcore-1.0.7 httpx-0.27.0 idna-3.10 importlib-metadata-6.11.0 inflection-0.5.1 itsdangerous-2.2.0 jinja2-3.1.5 jmespath-0.10.0 jsonschema-4.23.0 jsonschema-specifications-2024.10.1 lazy-object-proxy-1.10.0 limits-4.0.1 linkify-it-py-2.0.3 lockfile-0.12.2 markdown-it-py-3.0.0 markupsafe-3.0.2 marshmallow-3.26.0 marshmallow-oneofschema-3.1.1 marshmallow-sqlalchemy-0.28.2 mdit-py-plugins-0.4.2 mdurl-0.1.2 methodtools-0.4.7 more-itertools-10.6.0 multidict-6.1.0 opentelemetry-api-1.27.0 opentelemetry-exporter-otlp-1.27.0 opentelemetry-exporter-otlp-proto-common-1.27.0 opentelemetry-exporter-otlp-proto-grpc-1.27.0 opentelemetry-exporter-otlp-proto-http-1.27.0 opentelemetry-proto-1.27.0 opentelemetry-sdk-1.27.0 opentelemetry-semantic-conventions-0.48b0 ordered-set-4.1.0 packaging-24.2 pathspec-0.12.1 pendulum-3.0.0 pluggy-1.5.0 prison-0.2.1 propcache-0.2.1 protobuf-4.25.6 psutil-6.1.1 psycopg2-binary-2.9.10 pycparser-2.22 pygments-2.19.1 pyjwt-2.10.1 python-daemon-3.1.2 python-dateutil-2.9.0.post0 python-nvd3-0.16.0 python-slugify-8.0.4 pytz-2025.1 referencing-0.36.2 requests-2.32.3 requests-toolbelt-1.0.0 rfc3339-validator-0.1.4 rich-13.9.4 rich-argparse-1.6.0 rpds-py-0.22.3 setproctitle-1.3.4 six-1.17.0 sniffio-1.3.1 sqlalchemy-1.4.54 sqlalchemy-jsonfield-1.0.2 sqlalchemy-utils-0.41.2 sqlparse-0.5.3 tabulate-0.9.0 tenacity-9.0.0 termcolor-2.5.0 text-unidecode-1.3 time-machine-2.16.0 typing-extensions-4.12.2 tzdata-2025.1 uc-micro-py-1.0.3 universal-pathlib-0.2.6 urllib3-2.3.0 werkzeug-2.2.3 wirerope-1.0.0 wrapt-1.17.2 yarl-1.18.3 zipp-3.21.0
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:46.391201
+CMD: mkdir -p ~/airflow
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:46.566946
+CMD: sudo -u postgres psql -d airflow -c "GRANT USAGE, CREATE ON SCHEMA public TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+GRANT
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:46.637256
+CMD: sudo -u postgres psql -d airflow -c "ALTER SCHEMA public OWNER TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+ALTER SCHEMA
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:46.712829
+CMD: sudo -u postgres psql -d airflow -c "GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+GRANT
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:46.792725
+CMD: sudo -u postgres psql -d airflow -c "GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+GRANT
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:46.865758
+CMD: sudo -u postgres psql -d airflow -c "ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+ALTER DEFAULT PRIVILEGES
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:46.935268
+CMD: sudo -u postgres psql -d airflow -c "ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+ALTER DEFAULT PRIVILEGES
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:10:55.064365
+CMD: bash -lc 'export AIRFLOW_HOME=~/airflow && export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN="postgresql+psycopg2://airflow:airflow@localhost:5432/airflow" && export AIRFLOW__CORE__EXECUTOR="LocalExecutor" && source ~/airflow_venv/bin/activate && yes y | airflow db migrate'
+RETURN CODE: 0
+
+STDOUT:
+DB: postgresql+psycopg2://airflow:***@localhost:5432/airflow
+Performing upgrade to the metadata database postgresql+psycopg2://airflow:***@localhost:5432/airflow
+[2026-03-19T17:10:48.995+0530] {migration.py:207} INFO - Context impl PostgresqlImpl.
+[2026-03-19T17:10:48.998+0530] {migration.py:210} INFO - Will assume transactional DDL.
+[2026-03-19T17:10:49.012+0530] {migration.py:207} INFO - Context impl PostgresqlImpl.
+[2026-03-19T17:10:49.013+0530] {migration.py:210} INFO - Will assume transactional DDL.
+[2026-03-19T17:10:49.016+0530] {db.py:1675} INFO - Creating tables
+Database migrating done!
+
+STDERR:
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade 22ed7efa9da2 -> 5f2621c13b39, Rename dag_schedule_dataset_alias_reference constraint names.
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+WARNI [unusual_prefix_1fc3fb88140962b124d053dc339c4cd19f1032b2_example_kubernetes_executor] The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+WARNI [airflow.example_dags.plugins.workday] Could not import pandas. Holidays will not be considered.
+WARNI [unusual_prefix_aade19dd7b29ad3fe730c16849d796fd9584982c_tutorial_taskflow_api_virtualenv] The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.
+WARNI [unusual_prefix_273567e9fc965075258799bf63e276e209381151_example_python_operator] The virtalenv_python example task requires virtualenv, please install it.
+WARNI [unusual_prefix_3950a29415e263195762e5ca24408041e5f43d8e_example_local_kubernetes_executor] Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/home/vboxuser/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+WARNI [unusual_prefix_3950a29415e263195762e5ca24408041e5f43d8e_example_local_kubernetes_executor] Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+WARNI [unusual_prefix_057a8d3cacf1403db92b9429bcd2cbe4bedfed14_example_python_decorator] The virtalenv_python example task requires virtualenv, please install it.
+WARNI [unusual_prefix_ab961e97d62828aeffc7bbfad6da779f2ba5c90e_workday] Could not import pandas. Holidays will not be considered.
+WARNI [airflow.example_dags.plugins.workday] Could not import pandas. Holidays will not be considered.
+
+
+================================================================================
+2026-03-19T17:10:59.160929
+CMD: bash -lc 'export AIRFLOW_HOME=~/airflow && export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN="postgresql+psycopg2://airflow:airflow@localhost:5432/airflow" && export AIRFLOW__CORE__EXECUTOR="LocalExecutor" && source ~/airflow_venv/bin/activate && airflow users list | grep -q "^admin[[:space:]]" || airflow users create --username "admin" --firstname Admin --lastname User --role Admin --email admin@example.com --password "admin123"'
+RETURN CODE: 0
+
+STDOUT:
+[2026-03-19T17:10:58.808+0530] {workday.py:41} WARNING - Could not import pandas. Holidays will not be considered.
+admin already exist in the db
+
+STDERR:
+/home/vboxuser/airflow_venv/lib/python3.12/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+
+
+================================================================================
+2026-03-19T17:11:07.475948
+CMD: bash -lc 'ss -ltnp | grep :8080'
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:11:07.768731
+CMD: bash -lc 'ps aux | grep -E "airflow webserver|airflow scheduler|airflow triggerer" | grep -v grep'
+RETURN CODE: 0
+
+STDOUT:
+vboxuser   14556 15.6  2.7 1207688 123996 ?      Ss   17:10   0:01 /home/vboxuser/airflow_venv/bin/python /home/vboxuser/airflow_venv/bin/airflow webserver --port 8080
+vboxuser   14557 19.4  2.9 1214844 131104 ?      Rs   17:10   0:01 /home/vboxuser/airflow_venv/bin/python /home/vboxuser/airflow_venv/bin/airflow scheduler
+vboxuser   14559 14.5  2.8 1360716 129096 ?      Ssl  17:10   0:01 /home/vboxuser/airflow_venv/bin/python /home/vboxuser/airflow_venv/bin/airflow triggerer
+vboxuser   14722  8.4  2.5 1215124 114956 ?      R    17:11   0:00 airflow scheduler -- DagFileProcessorManager
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:12:17.446770
+CMD: python3 --version
+RETURN CODE: 0
+
+STDOUT:
+Python 3.12.3
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:12:18.174042
+CMD: pip3 --version
+RETURN CODE: 0
+
+STDOUT:
+pip 24.0 from /home/vboxuser/agents/venv/lib/python3.12/site-packages/pip (python 3.12)
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:12:18.247496
+CMD: psql --version
+RETURN CODE: 0
+
+STDOUT:
+psql (PostgreSQL) 16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:12:18.265952
+CMD: systemctl is-active postgresql || true
+RETURN CODE: 0
+
+STDOUT:
+active
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:12:18.277965
+CMD: which airflow || true
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:12:22.416936
+CMD: bash -lc 'source ~/airflow_venv/bin/activate 2>/dev/null && airflow version'
+RETURN CODE: 0
+
+STDOUT:
+2.10.5
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:12:31.839391
+CMD: python3 --version
+RETURN CODE: 0
+
+STDOUT:
+Python 3.12.3
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:12:32.473906
+CMD: pip3 --version
+RETURN CODE: 0
+
+STDOUT:
+pip 24.0 from /home/vboxuser/agents/venv/lib/python3.12/site-packages/pip (python 3.12)
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:12:32.534411
+CMD: psql --version
+RETURN CODE: 0
+
+STDOUT:
+psql (PostgreSQL) 16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:12:32.547494
+CMD: systemctl is-active postgresql || true
+RETURN CODE: 0
+
+STDOUT:
+active
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:12:32.555116
+CMD: which airflow || true
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:12:35.389864
+CMD: bash -lc 'source ~/airflow_venv/bin/activate 2>/dev/null && airflow version'
+RETURN CODE: 0
+
+STDOUT:
+2.10.5
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:23:56.695233
+CMD: python3 --version
+RETURN CODE: 0
+
+STDOUT:
+Python 3.12.3
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:23:57.845281
+CMD: pip3 --version
+RETURN CODE: 0
+
+STDOUT:
+pip 24.0 from /home/vboxuser/agents/venv/lib/python3.12/site-packages/pip (python 3.12)
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:23:57.975098
+CMD: psql --version
+RETURN CODE: 0
+
+STDOUT:
+psql (PostgreSQL) 16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:23:57.995833
+CMD: systemctl is-active postgresql || true
+RETURN CODE: 0
+
+STDOUT:
+active
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:23:58.006531
+CMD: which airflow || true
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:24:03.585640
+CMD: bash -lc 'source ~/airflow_venv/bin/activate 2>/dev/null && airflow version'
+RETURN CODE: 0
+
+STDOUT:
+2.10.5
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:24:12.019473
+CMD: python3 --version
+RETURN CODE: 0
+
+STDOUT:
+Python 3.12.3
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:24:12.478065
+CMD: pip3 --version
+RETURN CODE: 0
+
+STDOUT:
+pip 24.0 from /home/vboxuser/agents/venv/lib/python3.12/site-packages/pip (python 3.12)
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:24:12.515507
+CMD: psql --version
+RETURN CODE: 0
+
+STDOUT:
+psql (PostgreSQL) 16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:24:12.541492
+CMD: systemctl is-active postgresql || true
+RETURN CODE: 0
+
+STDOUT:
+active
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:24:12.546071
+CMD: which airflow || true
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:24:14.807474
+CMD: bash -lc 'source ~/airflow_venv/bin/activate 2>/dev/null && airflow version'
+RETURN CODE: 0
+
+STDOUT:
+2.10.5
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:22.660303
+CMD: python3 --version
+RETURN CODE: 0
+
+STDOUT:
+Python 3.12.3
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:22.912749
+CMD: pip3 --version
+RETURN CODE: 0
+
+STDOUT:
+pip 24.0 from /home/vboxuser/agents/venv/lib/python3.12/site-packages/pip (python 3.12)
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:22.996579
+CMD: psql --version
+RETURN CODE: 0
+
+STDOUT:
+psql (PostgreSQL) 16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.017029
+CMD: systemctl is-active postgresql || true
+RETURN CODE: 0
+
+STDOUT:
+active
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.024627
+CMD: which airflow || true
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.045007
+CMD: bash -lc 'source ~/airflow_venv/bin/activate 2>/dev/null && airflow version'
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.047869
+CMD: airflow version
+RETURN CODE: 127
+
+STDOUT:
+
+STDERR:
+/bin/bash: line 1: airflow: command not found
+
+
+================================================================================
+2026-03-19T17:32:23.104203
+CMD: dpkg -s python3-pip >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.135265
+CMD: dpkg -s python3-venv >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.161121
+CMD: dpkg -s build-essential >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.185650
+CMD: dpkg -s curl >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.212739
+CMD: dpkg -s libssl-dev >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.238521
+CMD: dpkg -s libffi-dev >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.258913
+CMD: dpkg -s libpq-dev >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.283944
+CMD: dpkg -s postgresql >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.304123
+CMD: dpkg -s postgresql-contrib >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.325774
+CMD: dpkg -s libsasl2-dev >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.347925
+CMD: dpkg -s libsasl2-modules >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.378418
+CMD: dpkg -s libxmlsec1 >/dev/null 2>&1
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.408661
+CMD: dpkg -s libxmlsec1-dev >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.434869
+CMD: dpkg -s pkg-config >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.455954
+CMD: dpkg -s unixodbc >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.481562
+CMD: dpkg -s unixodbc-dev >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.502671
+CMD: dpkg -s freetds-bin >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.525320
+CMD: dpkg -s freetds-dev >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.546770
+CMD: dpkg -s ldap-utils >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.565810
+CMD: dpkg -s libldap2-dev >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:23.590701
+CMD: dpkg -s sqlite3 >/dev/null 2>&1
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:32.252528
+CMD: sudo apt update && sudo apt install -y libxmlsec1
+RETURN CODE: 0
+
+STDOUT:
+Hit:1 https://aaddrick.github.io/claude-desktop-debian stable InRelease
+Hit:2 https://dl.google.com/linux/chrome/deb stable InRelease
+Hit:3 https://deb.nodesource.com/node_20.x nodistro InRelease
+Hit:4 https://download.docker.com/linux/ubuntu noble InRelease
+Get:5 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:6 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble InRelease
+Hit:7 https://artifacts.opensearch.org/releases/bundle/opensearch/2.x/apt stable InRelease
+Hit:8 http://in.archive.ubuntu.com/ubuntu noble InRelease
+Hit:9 http://in.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:10 http://in.archive.ubuntu.com/ubuntu noble-backports InRelease
+Get:11 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1,542 kB]
+Get:12 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [977 kB]
+Fetched 2,645 kB in 4s (695 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+21 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libxmlsec1t64 is already the newest version (1.2.39-5build2).
+0 upgraded, 0 newly installed, 0 to remove and 21 not upgraded.
+
+STDERR:
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+
+================================================================================
+2026-03-19T17:32:33.928178
+CMD: sudo systemctl enable --now postgresql
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+Synchronizing state of postgresql.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable postgresql
+
+
+================================================================================
+2026-03-19T17:32:34.014852
+CMD: sudo -u postgres psql -tc "SELECT 1 FROM pg_database WHERE datname='airflow'" | grep -q 1 || sudo -u postgres psql -c "CREATE DATABASE airflow;"
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:34.080490
+CMD: sudo -u postgres psql -tc "SELECT 1 FROM pg_roles WHERE rolname='airflow'" | grep -q 1 || sudo -u postgres psql -c "CREATE USER airflow WITH PASSWORD 'airflow';"
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:34.142119
+CMD: sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE airflow TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+GRANT
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:36.737271
+CMD: python3 -m venv ~/airflow_venv
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:32:39.412519
+CMD: bash -lc 'source ~/airflow_venv/bin/activate && python -m pip install --upgrade pip setuptools wheel'
+RETURN CODE: 0
+
+STDOUT:
+Requirement already satisfied: pip in /home/vboxuser/airflow_venv/lib/python3.12/site-packages (24.0)
+Collecting pip
+  Using cached pip-26.0.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting setuptools
+  Using cached setuptools-82.0.1-py3-none-any.whl.metadata (6.5 kB)
+Collecting wheel
+  Using cached wheel-0.46.3-py3-none-any.whl.metadata (2.4 kB)
+Collecting packaging>=24.0 (from wheel)
+  Using cached packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Using cached pip-26.0.1-py3-none-any.whl (1.8 MB)
+Using cached setuptools-82.0.1-py3-none-any.whl (1.0 MB)
+Using cached wheel-0.46.3-py3-none-any.whl (30 kB)
+Using cached packaging-26.0-py3-none-any.whl (74 kB)
+Installing collected packages: setuptools, pip, packaging, wheel
+  Attempting uninstall: pip
+    Found existing installation: pip 24.0
+    Uninstalling pip-24.0:
+      Successfully uninstalled pip-24.0
+Successfully installed packaging-26.0 pip-26.0.1 setuptools-82.0.1 wheel-0.46.3
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:33:03.414118
+CMD: bash -lc 'source ~/airflow_venv/bin/activate && python -m pip install "apache-airflow[postgres]==2.10.5" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.10.5/constraints-3.12.txt"'
+RETURN CODE: 0
+
+STDOUT:
+Collecting apache-airflow==2.10.5 (from apache-airflow[postgres]==2.10.5)
+  Using cached apache_airflow-2.10.5-py3-none-any.whl.metadata (45 kB)
+Collecting alembic<2.0,>=1.13.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached alembic-1.14.1-py3-none-any.whl.metadata (7.4 kB)
+Collecting argcomplete>=1.10 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached argcomplete-3.5.3-py3-none-any.whl.metadata (16 kB)
+Collecting asgiref>=2.3.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached asgiref-3.8.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting attrs>=22.1.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached attrs-25.1.0-py3-none-any.whl.metadata (10 kB)
+Collecting blinker>=1.6.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting colorlog>=6.8.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached colorlog-6.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting configupdater>=3.1.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached ConfigUpdater-3.2-py2.py3-none-any.whl.metadata (10 kB)
+Collecting connexion<3.0,>=2.14.2 (from connexion[flask]<3.0,>=2.14.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached connexion-2.14.2-py2.py3-none-any.whl.metadata (28 kB)
+Collecting cron-descriptor>=1.2.24 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached cron_descriptor-1.4.5-py3-none-any.whl.metadata (5.7 kB)
+Collecting croniter>=2.0.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached croniter-6.0.0-py2.py3-none-any.whl.metadata (32 kB)
+Collecting cryptography>=41.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached cryptography-42.0.8-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Collecting deprecated>=1.2.13 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Deprecated-1.2.18-py2.py3-none-any.whl.metadata (5.7 kB)
+Collecting dill>=0.2.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached dill-0.3.9-py3-none-any.whl.metadata (10 kB)
+Collecting flask-caching>=2.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask_Caching-2.3.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting flask-session<0.6,>=0.4.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached flask_session-0.5.0-py3-none-any.whl.metadata (1.4 kB)
+Collecting flask-wtf>=1.1.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached flask_wtf-1.2.2-py3-none-any.whl.metadata (3.4 kB)
+Collecting flask<2.3,>=2.2.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask-2.2.5-py3-none-any.whl.metadata (3.9 kB)
+Collecting fsspec>=2023.10.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached fsspec-2025.2.0-py3-none-any.whl.metadata (11 kB)
+Collecting google-re2>=1.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached google_re2-1.1.20240702-1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (2.2 kB)
+Collecting gunicorn>=20.1.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting httpx>=0.25.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached httpx-0.27.0-py3-none-any.whl.metadata (7.2 kB)
+Collecting itsdangerous>=2.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached jinja2-3.1.5-py3-none-any.whl.metadata (2.6 kB)
+Collecting jsonschema>=4.18.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting lazy-object-proxy>=1.2.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached lazy_object_proxy-1.10.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.8 kB)
+Collecting linkify-it-py>=2.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached linkify_it_py-2.0.3-py3-none-any.whl.metadata (8.5 kB)
+Collecting lockfile>=0.12.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+Collecting markdown-it-py>=2.1.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting markupsafe>=1.1.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached MarkupSafe-3.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting marshmallow-oneofschema>=2.0.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached marshmallow_oneofschema-3.1.1-py3-none-any.whl.metadata (5.0 kB)
+Collecting mdit-py-plugins>=0.3.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached mdit_py_plugins-0.4.2-py3-none-any.whl.metadata (2.8 kB)
+Collecting methodtools>=0.4.7 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached methodtools-0.4.7-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting opentelemetry-api>=1.24.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_api-1.27.0-py3-none-any.whl.metadata (1.4 kB)
+Collecting opentelemetry-exporter-otlp>=1.24.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_exporter_otlp-1.27.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting packaging>=23.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pathspec>=0.9.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Collecting pendulum<4.0,>=3.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached pendulum-3.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.9 kB)
+Collecting pluggy>=1.5.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached pluggy-1.5.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting psutil>=5.8.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached psutil-6.1.1-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+Collecting pygments>=2.0.1 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached pygments-2.19.1-py3-none-any.whl.metadata (2.5 kB)
+Collecting pyjwt>=2.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting python-daemon>=3.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached python_daemon-3.1.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting python-dateutil>=2.7.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting python-nvd3>=0.15.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached python_nvd3-0.16.0-py3-none-any.whl
+Collecting python-slugify>=5.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached python_slugify-8.0.4-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting requests<3,>=2.27.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting requests-toolbelt>=0.4.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Collecting rfc3339-validator>=0.1.4 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting rich-argparse>=1.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached rich_argparse-1.6.0-py3-none-any.whl.metadata (14 kB)
+Collecting rich>=12.4.4 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached rich-13.9.4-py3-none-any.whl.metadata (18 kB)
+Collecting setproctitle>=1.3.3 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached setproctitle-1.3.4-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+Collecting sqlalchemy<2.0,>=1.4.36 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached SQLAlchemy-1.4.54-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+Collecting sqlalchemy-jsonfield>=1.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached SQLAlchemy_JSONField-1.0.2-py3-none-any.whl.metadata (5.2 kB)
+Collecting tabulate>=0.7.5 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+Collecting tenacity!=8.2.0,>=8.0.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached tenacity-9.0.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting termcolor>=1.1.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached termcolor-2.5.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting universal-pathlib!=0.2.4,>=0.2.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached universal_pathlib-0.2.6-py3-none-any.whl.metadata (25 kB)
+Collecting werkzeug<3,>=2.0 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Werkzeug-2.2.3-py3-none-any.whl.metadata (4.4 kB)
+Collecting apache-airflow-providers-common-compat (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached apache_airflow_providers_common_compat-1.3.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting apache-airflow-providers-common-io (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached apache_airflow_providers_common_io-1.5.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting apache-airflow-providers-common-sql (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached apache_airflow_providers_common_sql-1.21.0-py3-none-any.whl.metadata (6.2 kB)
+Collecting apache-airflow-providers-fab>=1.0.2 (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached apache_airflow_providers_fab-1.5.2-py3-none-any.whl.metadata (6.6 kB)
+Collecting apache-airflow-providers-ftp (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached apache_airflow_providers_ftp-3.12.0-py3-none-any.whl.metadata (6.0 kB)
+Collecting apache-airflow-providers-http (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached apache_airflow_providers_http-5.0.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting apache-airflow-providers-imap (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached apache_airflow_providers_imap-3.8.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting apache-airflow-providers-smtp (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached apache_airflow_providers_smtp-1.9.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting apache-airflow-providers-sqlite (from apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached apache_airflow_providers_sqlite-4.0.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting apache-airflow-providers-postgres (from apache-airflow[postgres]==2.10.5)
+  Using cached apache_airflow_providers_postgres-6.0.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting Mako (from alembic<2.0,>=1.13.1->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Mako-1.3.8-py3-none-any.whl.metadata (2.9 kB)
+Collecting typing-extensions>=4 (from alembic<2.0,>=1.13.1->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting clickclick<21,>=1.2 (from connexion<3.0,>=2.14.2->connexion[flask]<3.0,>=2.14.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached clickclick-20.10.2-py2.py3-none-any.whl.metadata (7.6 kB)
+Collecting PyYAML<7,>=5.1 (from connexion<3.0,>=2.14.2->connexion[flask]<3.0,>=2.14.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting inflection<0.6,>=0.3.1 (from connexion<3.0,>=2.14.2->connexion[flask]<3.0,>=2.14.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached inflection-0.5.1-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting click>=4.0 (from clickclick<21,>=1.2->connexion<3.0,>=2.14.2->connexion[flask]<3.0,>=2.14.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+Collecting cachelib (from flask-session<0.6,>=0.4.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached cachelib-0.9.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.18.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached jsonschema_specifications-2024.10.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.18.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached referencing-0.36.2-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema>=4.18.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached rpds_py-0.22.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting tzdata>=2020.1 (from pendulum<4.0,>=3.0.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached tzdata-2025.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting time-machine>=2.6.0 (from pendulum<4.0,>=3.0.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached time_machine-2.16.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting charset-normalizer<4,>=2 (from requests<3,>=2.27.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached charset_normalizer-3.4.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+Collecting idna<4,>=2.5 (from requests<3,>=2.27.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting urllib3<3,>=1.21.1 (from requests<3,>=2.27.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests<3,>=2.27.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+Collecting greenlet!=0.4.17 (from sqlalchemy<2.0,>=1.4.36->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached greenlet-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Collecting flask-appbuilder==4.5.2 (from apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask_AppBuilder-4.5.2-py3-none-any.whl.metadata (8.9 kB)
+Collecting flask-login>=0.6.2 (from apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask_Login-0.6.3-py3-none-any.whl.metadata (5.8 kB)
+Collecting jmespath>=0.7.0 (from apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached jmespath-0.10.0-py2.py3-none-any.whl.metadata (8.0 kB)
+Collecting apispec<7,>=6.0.0 (from apispec[yaml]<7,>=6.0.0->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached apispec-6.8.1-py3-none-any.whl.metadata (10 kB)
+Collecting colorama<1,>=0.3.9 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting email-validator>=1.0.5 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached email_validator-2.2.0-py3-none-any.whl.metadata (25 kB)
+Collecting Flask-Babel<3,>=1 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask_Babel-2.0.0-py3-none-any.whl.metadata (2.1 kB)
+Collecting Flask-Limiter<4,>3 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask_Limiter-3.10.1-py3-none-any.whl.metadata (6.1 kB)
+Collecting Flask-SQLAlchemy<3,>=2.4 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl.metadata (3.1 kB)
+Collecting Flask-JWT-Extended<5.0.0,>=4.0.0 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached Flask_JWT_Extended-4.7.1-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting marshmallow<4,>=3.18.0 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached marshmallow-3.26.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting marshmallow-sqlalchemy<0.29.0,>=0.22.0 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached marshmallow_sqlalchemy-0.28.2-py2.py3-none-any.whl.metadata (6.8 kB)
+Collecting prison<1.0.0,>=0.2.1 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached prison-0.2.1-py2.py3-none-any.whl.metadata (973 bytes)
+Collecting sqlalchemy-utils<1,>=0.32.21 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached SQLAlchemy_Utils-0.41.2-py3-none-any.whl.metadata (4.2 kB)
+Collecting WTForms<4 (from flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached wtforms-3.2.1-py3-none-any.whl.metadata (5.3 kB)
+Collecting pytz (from Flask-Babel<3,>=1->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached pytz-2025.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting Babel>=2.3 (from Flask-Babel<3,>=1->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached babel-2.17.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting limits>=3.13 (from Flask-Limiter<4,>3->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached limits-4.0.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting ordered-set<5,>4 (from Flask-Limiter<4,>3->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached ordered_set-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+Collecting six (from prison<1.0.0,>=0.2.1->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting cffi>=1.12 (from cryptography>=41.0.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting pycparser (from cffi>=1.12->cryptography>=41.0.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Collecting wrapt<2,>=1.10 (from deprecated>=1.2.13->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached wrapt-1.17.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+Collecting dnspython>=2.0.0 (from email-validator>=1.0.5->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached dnspython-2.7.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting anyio (from httpx>=0.25.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached anyio-4.8.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting httpcore==1.* (from httpx>=0.25.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached httpcore-1.0.7-py3-none-any.whl.metadata (21 kB)
+Collecting sniffio (from httpx>=0.25.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting h11<0.15,>=0.13 (from httpcore==1.*->httpx>=0.25.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting uc-micro-py (from linkify-it-py>=2.0.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached uc_micro_py-1.0.3-py3-none-any.whl.metadata (2.0 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.1.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting wirerope>=0.4.7 (from methodtools>=0.4.7->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached wirerope-1.0.0-py2.py3-none-any.whl.metadata (3.3 kB)
+Collecting importlib-metadata<=8.4.0,>=6.0 (from opentelemetry-api>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached importlib_metadata-6.11.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting zipp>=0.5 (from importlib-metadata<=8.4.0,>=6.0->opentelemetry-api>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached zipp-3.21.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting opentelemetry-exporter-otlp-proto-grpc==1.27.0 (from opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_exporter_otlp_proto_grpc-1.27.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting opentelemetry-exporter-otlp-proto-http==1.27.0 (from opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_exporter_otlp_proto_http-1.27.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting googleapis-common-protos~=1.52 (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached googleapis_common_protos-1.66.0-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting grpcio<2.0.0,>=1.0.0 (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached grpcio-1.70.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.9 kB)
+Collecting opentelemetry-exporter-otlp-proto-common==1.27.0 (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_exporter_otlp_proto_common-1.27.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting opentelemetry-proto==1.27.0 (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_proto-1.27.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting opentelemetry-sdk~=1.27.0 (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_sdk-1.27.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting protobuf<5.0,>=3.19 (from opentelemetry-proto==1.27.0->opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached protobuf-4.25.6-cp37-abi3-manylinux2014_x86_64.whl.metadata (541 bytes)
+Collecting opentelemetry-semantic-conventions==0.48b0 (from opentelemetry-sdk~=1.27.0->opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.24.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached opentelemetry_semantic_conventions-0.48b0-py3-none-any.whl.metadata (2.4 kB)
+Collecting text-unidecode>=1.3 (from python-slugify>=5.0->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+Collecting more-itertools>=9.0.0 (from apache-airflow-providers-common-sql->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached more_itertools-10.6.0-py3-none-any.whl.metadata (37 kB)
+Collecting sqlparse>=0.5.1 (from apache-airflow-providers-common-sql->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting aiohttp!=3.11.0,>=3.9.2 (from apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached aiohttp-3.11.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+Collecting aiohappyeyeballs>=2.3.0 (from aiohttp!=3.11.0,>=3.9.2->apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached aiohappyeyeballs-2.4.4-py3-none-any.whl.metadata (6.1 kB)
+Collecting aiosignal>=1.1.2 (from aiohttp!=3.11.0,>=3.9.2->apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached aiosignal-1.3.2-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp!=3.11.0,>=3.9.2->apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached frozenlist-1.5.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp!=3.11.0,>=3.9.2->apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached multidict-6.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.0 kB)
+Collecting propcache>=0.2.0 (from aiohttp!=3.11.0,>=3.9.2->apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached propcache-0.2.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.2 kB)
+Collecting yarl<2.0,>=1.17.0 (from aiohttp!=3.11.0,>=3.9.2->apache-airflow-providers-http->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached yarl-1.18.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (69 kB)
+Collecting asyncpg>=0.30.0 (from apache-airflow-providers-postgres->apache-airflow[postgres]==2.10.5)
+  Using cached asyncpg-0.30.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.0 kB)
+Collecting psycopg2-binary>=2.9.4 (from apache-airflow-providers-postgres->apache-airflow[postgres]==2.10.5)
+  Using cached psycopg2_binary-2.9.10-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting aiosqlite>=0.20.0 (from apache-airflow-providers-sqlite->apache-airflow==2.10.5->apache-airflow[postgres]==2.10.5)
+  Using cached aiosqlite-0.20.0-py3-none-any.whl.metadata (4.3 kB)
+Using cached apache_airflow-2.10.5-py3-none-any.whl (13.4 MB)
+Using cached alembic-1.14.1-py3-none-any.whl (233 kB)
+Using cached connexion-2.14.2-py2.py3-none-any.whl (95 kB)
+Using cached clickclick-20.10.2-py2.py3-none-any.whl (7.4 kB)
+Using cached Flask-2.2.5-py3-none-any.whl (101 kB)
+Using cached flask_session-0.5.0-py3-none-any.whl (7.2 kB)
+Using cached inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+Using cached jsonschema-4.23.0-py3-none-any.whl (88 kB)
+Using cached pendulum-3.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (384 kB)
+Using cached PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (767 kB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Using cached charset_normalizer-3.4.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (145 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached SQLAlchemy-1.4.54-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+Using cached urllib3-2.3.0-py3-none-any.whl (128 kB)
+Using cached Werkzeug-2.2.3-py3-none-any.whl (233 kB)
+Using cached apache_airflow_providers_fab-1.5.2-py3-none-any.whl (97 kB)
+Using cached Flask_AppBuilder-4.5.2-py3-none-any.whl (2.2 MB)
+Using cached apispec-6.8.1-py3-none-any.whl (30 kB)
+Using cached click-8.1.8-py3-none-any.whl (98 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Using cached Flask_Babel-2.0.0-py3-none-any.whl (9.3 kB)
+Using cached Flask_JWT_Extended-4.7.1-py2.py3-none-any.whl (22 kB)
+Using cached Flask_Limiter-3.10.1-py3-none-any.whl (28 kB)
+Using cached Flask_Login-0.6.3-py3-none-any.whl (17 kB)
+Using cached Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB)
+Using cached flask_wtf-1.2.2-py3-none-any.whl (12 kB)
+Using cached marshmallow-3.26.0-py3-none-any.whl (50 kB)
+Using cached marshmallow_sqlalchemy-0.28.2-py2.py3-none-any.whl (16 kB)
+Using cached ordered_set-4.1.0-py3-none-any.whl (7.6 kB)
+Using cached prison-0.2.1-py2.py3-none-any.whl (5.8 kB)
+Using cached PyJWT-2.10.1-py3-none-any.whl (22 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached rich-13.9.4-py3-none-any.whl (242 kB)
+Using cached pygments-2.19.1-py3-none-any.whl (1.2 MB)
+Using cached SQLAlchemy_Utils-0.41.2-py3-none-any.whl (93 kB)
+Using cached wtforms-3.2.1-py3-none-any.whl (152 kB)
+Using cached apache_airflow_providers_common_compat-1.3.0-py3-none-any.whl (24 kB)
+Using cached argcomplete-3.5.3-py3-none-any.whl (43 kB)
+Using cached asgiref-3.8.1-py3-none-any.whl (23 kB)
+Using cached attrs-25.1.0-py3-none-any.whl (63 kB)
+Using cached babel-2.17.0-py3-none-any.whl (10.2 MB)
+Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Using cached certifi-2025.1.31-py3-none-any.whl (166 kB)
+Using cached colorlog-6.9.0-py3-none-any.whl (11 kB)
+Using cached ConfigUpdater-3.2-py2.py3-none-any.whl (34 kB)
+Using cached cron_descriptor-1.4.5-py3-none-any.whl (50 kB)
+Using cached croniter-6.0.0-py2.py3-none-any.whl (25 kB)
+Using cached cryptography-42.0.8-cp39-abi3-manylinux_2_28_x86_64.whl (3.9 MB)
+Using cached cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (479 kB)
+Using cached Deprecated-1.2.18-py2.py3-none-any.whl (10.0 kB)
+Using cached wrapt-1.17.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (89 kB)
+Using cached dill-0.3.9-py3-none-any.whl (119 kB)
+Using cached email_validator-2.2.0-py3-none-any.whl (33 kB)
+Using cached dnspython-2.7.0-py3-none-any.whl (313 kB)
+Using cached Flask_Caching-2.3.0-py3-none-any.whl (28 kB)
+Using cached cachelib-0.9.0-py3-none-any.whl (15 kB)
+Using cached fsspec-2025.2.0-py3-none-any.whl (184 kB)
+Using cached google_re2-1.1.20240702-1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (546 kB)
+Using cached greenlet-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (613 kB)
+Using cached gunicorn-23.0.0-py3-none-any.whl (85 kB)
+Using cached httpx-0.27.0-py3-none-any.whl (75 kB)
+Using cached httpcore-1.0.7-py3-none-any.whl (78 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Using cached jinja2-3.1.5-py3-none-any.whl (134 kB)
+Using cached jmespath-0.10.0-py2.py3-none-any.whl (24 kB)
+Using cached jsonschema_specifications-2024.10.1-py3-none-any.whl (18 kB)
+Using cached lazy_object_proxy-1.10.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (72 kB)
+Using cached limits-4.0.1-py3-none-any.whl (45 kB)
+Using cached packaging-24.2-py3-none-any.whl (65 kB)
+Using cached linkify_it_py-2.0.3-py3-none-any.whl (19 kB)
+Using cached lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Using cached MarkupSafe-3.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (23 kB)
+Using cached marshmallow_oneofschema-3.1.1-py3-none-any.whl (5.7 kB)
+Using cached mdit_py_plugins-0.4.2-py3-none-any.whl (55 kB)
+Using cached methodtools-0.4.7-py2.py3-none-any.whl (4.0 kB)
+Using cached opentelemetry_api-1.27.0-py3-none-any.whl (63 kB)
+Using cached importlib_metadata-6.11.0-py3-none-any.whl (23 kB)
+Using cached opentelemetry_exporter_otlp-1.27.0-py3-none-any.whl (7.0 kB)
+Using cached opentelemetry_exporter_otlp_proto_grpc-1.27.0-py3-none-any.whl (18 kB)
+Using cached opentelemetry_exporter_otlp_proto_common-1.27.0-py3-none-any.whl (17 kB)
+Using cached opentelemetry_exporter_otlp_proto_http-1.27.0-py3-none-any.whl (17 kB)
+Using cached opentelemetry_proto-1.27.0-py3-none-any.whl (52 kB)
+Using cached googleapis_common_protos-1.66.0-py2.py3-none-any.whl (221 kB)
+Using cached grpcio-1.70.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.9 MB)
+Using cached opentelemetry_sdk-1.27.0-py3-none-any.whl (110 kB)
+Using cached opentelemetry_semantic_conventions-0.48b0-py3-none-any.whl (149 kB)
+Using cached protobuf-4.25.6-cp37-abi3-manylinux2014_x86_64.whl (294 kB)
+Using cached pathspec-0.12.1-py3-none-any.whl (31 kB)
+Using cached pluggy-1.5.0-py3-none-any.whl (20 kB)
+Using cached psutil-6.1.1-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (287 kB)
+Using cached python_daemon-3.1.2-py3-none-any.whl (30 kB)
+Using cached python_slugify-8.0.4-py2.py3-none-any.whl (10 kB)
+Using cached pytz-2025.1-py2.py3-none-any.whl (507 kB)
+Using cached referencing-0.36.2-py3-none-any.whl (26 kB)
+Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+Using cached rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Using cached rich_argparse-1.6.0-py3-none-any.whl (20 kB)
+Using cached rpds_py-0.22.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (385 kB)
+Using cached setproctitle-1.3.4-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (31 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached SQLAlchemy_JSONField-1.0.2-py3-none-any.whl (10 kB)
+Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+Using cached tenacity-9.0.0-py3-none-any.whl (28 kB)
+Using cached termcolor-2.5.0-py3-none-any.whl (7.8 kB)
+Using cached text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+Using cached time_machine-2.16.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (33 kB)
+Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Using cached tzdata-2025.1-py2.py3-none-any.whl (346 kB)
+Using cached universal_pathlib-0.2.6-py3-none-any.whl (50 kB)
+Using cached wirerope-1.0.0-py2.py3-none-any.whl (9.2 kB)
+Using cached zipp-3.21.0-py3-none-any.whl (9.6 kB)
+Using cached anyio-4.8.0-py3-none-any.whl (96 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached apache_airflow_providers_common_io-1.5.0-py3-none-any.whl (19 kB)
+Using cached apache_airflow_providers_common_sql-1.21.0-py3-none-any.whl (49 kB)
+Using cached more_itertools-10.6.0-py3-none-any.whl (63 kB)
+Using cached sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Using cached apache_airflow_providers_ftp-3.12.0-py3-none-any.whl (19 kB)
+Using cached apache_airflow_providers_http-5.0.0-py3-none-any.whl (27 kB)
+Using cached aiohttp-3.11.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+Using cached multidict-6.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (131 kB)
+Using cached yarl-1.18.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (336 kB)
+Using cached aiohappyeyeballs-2.4.4-py3-none-any.whl (14 kB)
+Using cached aiosignal-1.3.2-py2.py3-none-any.whl (7.6 kB)
+Using cached frozenlist-1.5.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (283 kB)
+Using cached propcache-0.2.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (243 kB)
+Using cached apache_airflow_providers_imap-3.8.0-py3-none-any.whl (17 kB)
+Using cached apache_airflow_providers_postgres-6.0.0-py3-none-any.whl (18 kB)
+Using cached asyncpg-0.30.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+Using cached psycopg2_binary-2.9.10-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+Using cached apache_airflow_providers_smtp-1.9.0-py3-none-any.whl (22 kB)
+Using cached apache_airflow_providers_sqlite-4.0.0-py3-none-any.whl (12 kB)
+Using cached aiosqlite-0.20.0-py3-none-any.whl (15 kB)
+Using cached Mako-1.3.8-py3-none-any.whl (78 kB)
+Using cached pycparser-2.22-py3-none-any.whl (117 kB)
+Using cached uc_micro_py-1.0.3-py3-none-any.whl (6.2 kB)
+Installing collected packages: text-unidecode, pytz, lockfile, cron-descriptor, zipp, wrapt, urllib3, uc-micro-py, tzdata, typing-extensions, termcolor, tenacity, tabulate, sqlparse, sniffio, six, setproctitle, rpds-py, PyYAML, python-slugify, python-daemon, pyjwt, pygments, pycparser, psycopg2-binary, psutil, protobuf, propcache, pluggy, pathspec, packaging, ordered-set, multidict, more-itertools, mdurl, markupsafe, lazy-object-proxy, jmespath, itsdangerous, inflection, idna, h11, grpcio, greenlet, google-re2, fsspec, frozenlist, dnspython, dill, configupdater, colorlog, colorama, click, charset-normalizer, certifi, cachelib, blinker, Babel, attrs, asyncpg, asgiref, argcomplete, aiohappyeyeballs, yarl, WTForms, wirerope, werkzeug, universal-pathlib, sqlalchemy, rfc3339-validator, requests, referencing, python-dateutil, prison, opentelemetry-proto, marshmallow, markdown-it-py, Mako, linkify-it-py, jinja2, importlib-metadata, httpcore, gunicorn, googleapis-common-protos, email-validator, deprecated, clickclick, cffi, apispec, anyio, aiosqlite, aiosignal, time-machine, sqlalchemy-utils, sqlalchemy-jsonfield, rich, requests-toolbelt, python-nvd3, opentelemetry-exporter-otlp-proto-common, opentelemetry-api, methodtools, mdit-py-plugins, marshmallow-sqlalchemy, marshmallow-oneofschema, limits, jsonschema-specifications, httpx, flask, cryptography, croniter, alembic, aiohttp, rich-argparse, pendulum, opentelemetry-semantic-conventions, jsonschema, flask-wtf, Flask-SQLAlchemy, flask-session, flask-login, Flask-Limiter, Flask-JWT-Extended, flask-caching, Flask-Babel, opentelemetry-sdk, flask-appbuilder, connexion, opentelemetry-exporter-otlp-proto-http, opentelemetry-exporter-otlp-proto-grpc, opentelemetry-exporter-otlp, apache-airflow-providers-smtp, apache-airflow-providers-imap, apache-airflow-providers-http, apache-airflow-providers-ftp, apache-airflow-providers-fab, apache-airflow-providers-common-sql, apache-airflow-providers-common-io, apache-airflow-providers-common-compat, apache-airflow-providers-sqlite, apache-airflow, apache-airflow-providers-postgres
+  Attempting uninstall: packaging
+    Found existing installation: packaging 26.0
+    Uninstalling packaging-26.0:
+      Successfully uninstalled packaging-26.0
+
+Successfully installed Babel-2.17.0 Flask-Babel-2.0.0 Flask-JWT-Extended-4.7.1 Flask-Limiter-3.10.1 Flask-SQLAlchemy-2.5.1 Mako-1.3.8 PyYAML-6.0.2 WTForms-3.2.1 aiohappyeyeballs-2.4.4 aiohttp-3.11.11 aiosignal-1.3.2 aiosqlite-0.20.0 alembic-1.14.1 anyio-4.8.0 apache-airflow-2.10.5 apache-airflow-providers-common-compat-1.3.0 apache-airflow-providers-common-io-1.5.0 apache-airflow-providers-common-sql-1.21.0 apache-airflow-providers-fab-1.5.2 apache-airflow-providers-ftp-3.12.0 apache-airflow-providers-http-5.0.0 apache-airflow-providers-imap-3.8.0 apache-airflow-providers-postgres-6.0.0 apache-airflow-providers-smtp-1.9.0 apache-airflow-providers-sqlite-4.0.0 apispec-6.8.1 argcomplete-3.5.3 asgiref-3.8.1 asyncpg-0.30.0 attrs-25.1.0 blinker-1.9.0 cachelib-0.9.0 certifi-2025.1.31 cffi-1.17.1 charset-normalizer-3.4.1 click-8.1.8 clickclick-20.10.2 colorama-0.4.6 colorlog-6.9.0 configupdater-3.2 connexion-2.14.2 cron-descriptor-1.4.5 croniter-6.0.0 cryptography-42.0.8 deprecated-1.2.18 dill-0.3.9 dnspython-2.7.0 email-validator-2.2.0 flask-2.2.5 flask-appbuilder-4.5.2 flask-caching-2.3.0 flask-login-0.6.3 flask-session-0.5.0 flask-wtf-1.2.2 frozenlist-1.5.0 fsspec-2025.2.0 google-re2-1.1.20240702 googleapis-common-protos-1.66.0 greenlet-3.1.1 grpcio-1.70.0 gunicorn-23.0.0 h11-0.14.0 httpcore-1.0.7 httpx-0.27.0 idna-3.10 importlib-metadata-6.11.0 inflection-0.5.1 itsdangerous-2.2.0 jinja2-3.1.5 jmespath-0.10.0 jsonschema-4.23.0 jsonschema-specifications-2024.10.1 lazy-object-proxy-1.10.0 limits-4.0.1 linkify-it-py-2.0.3 lockfile-0.12.2 markdown-it-py-3.0.0 markupsafe-3.0.2 marshmallow-3.26.0 marshmallow-oneofschema-3.1.1 marshmallow-sqlalchemy-0.28.2 mdit-py-plugins-0.4.2 mdurl-0.1.2 methodtools-0.4.7 more-itertools-10.6.0 multidict-6.1.0 opentelemetry-api-1.27.0 opentelemetry-exporter-otlp-1.27.0 opentelemetry-exporter-otlp-proto-common-1.27.0 opentelemetry-exporter-otlp-proto-grpc-1.27.0 opentelemetry-exporter-otlp-proto-http-1.27.0 opentelemetry-proto-1.27.0 opentelemetry-sdk-1.27.0 opentelemetry-semantic-conventions-0.48b0 ordered-set-4.1.0 packaging-24.2 pathspec-0.12.1 pendulum-3.0.0 pluggy-1.5.0 prison-0.2.1 propcache-0.2.1 protobuf-4.25.6 psutil-6.1.1 psycopg2-binary-2.9.10 pycparser-2.22 pygments-2.19.1 pyjwt-2.10.1 python-daemon-3.1.2 python-dateutil-2.9.0.post0 python-nvd3-0.16.0 python-slugify-8.0.4 pytz-2025.1 referencing-0.36.2 requests-2.32.3 requests-toolbelt-1.0.0 rfc3339-validator-0.1.4 rich-13.9.4 rich-argparse-1.6.0 rpds-py-0.22.3 setproctitle-1.3.4 six-1.17.0 sniffio-1.3.1 sqlalchemy-1.4.54 sqlalchemy-jsonfield-1.0.2 sqlalchemy-utils-0.41.2 sqlparse-0.5.3 tabulate-0.9.0 tenacity-9.0.0 termcolor-2.5.0 text-unidecode-1.3 time-machine-2.16.0 typing-extensions-4.12.2 tzdata-2025.1 uc-micro-py-1.0.3 universal-pathlib-0.2.6 urllib3-2.3.0 werkzeug-2.2.3 wirerope-1.0.0 wrapt-1.17.2 yarl-1.18.3 zipp-3.21.0
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:33:03.422195
+CMD: mkdir -p ~/airflow
+RETURN CODE: 0
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:33:03.500101
+CMD: sudo -u postgres psql -d airflow -c "GRANT USAGE, CREATE ON SCHEMA public TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+GRANT
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:33:03.565689
+CMD: sudo -u postgres psql -d airflow -c "ALTER SCHEMA public OWNER TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+ALTER SCHEMA
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:33:03.638617
+CMD: sudo -u postgres psql -d airflow -c "GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+GRANT
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:33:03.756028
+CMD: sudo -u postgres psql -d airflow -c "GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+GRANT
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:33:03.952573
+CMD: sudo -u postgres psql -d airflow -c "ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+ALTER DEFAULT PRIVILEGES
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:33:04.039932
+CMD: sudo -u postgres psql -d airflow -c "ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO airflow;"
+RETURN CODE: 0
+
+STDOUT:
+ALTER DEFAULT PRIVILEGES
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:33:06.099852
+CMD: bash -lc 'export AIRFLOW_HOME=~/airflow && export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN="postgresql+psycopg2://airflow:airflow@localhost:5432/airflow" && export AIRFLOW__CORE__EXECUTOR="LocalExecutor" && source ~/airflow_venv/bin/activate && yes y | airflow db migrate'
+RETURN CODE: 0
+
+STDOUT:
+DB: postgresql+psycopg2://airflow:***@localhost:5432/airflow
+Performing upgrade to the metadata database postgresql+psycopg2://airflow:***@localhost:5432/airflow
+[2026-03-19T17:33:05.509+0530] {migration.py:207} INFO - Context impl PostgresqlImpl.
+[2026-03-19T17:33:05.530+0530] {migration.py:210} INFO - Will assume transactional DDL.
+[2026-03-19T17:33:05.535+0530] {migration.py:207} INFO - Context impl PostgresqlImpl.
+[2026-03-19T17:33:05.536+0530] {migration.py:210} INFO - Will assume transactional DDL.
+[2026-03-19T17:33:05.539+0530] {db.py:1675} INFO - Creating tables
+Database migrating done!
+
+STDERR:
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+
+
+================================================================================
+2026-03-19T17:33:10.605779
+CMD: bash -lc 'export AIRFLOW_HOME=~/airflow && export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN="postgresql+psycopg2://airflow:airflow@localhost:5432/airflow" && export AIRFLOW__CORE__EXECUTOR="LocalExecutor" && source ~/airflow_venv/bin/activate && airflow users list | grep -q "^ashwanth[[:space:]]" || airflow users create --username "ashwanth" --firstname Admin --lastname User --role Admin --email ashwanth@example.com --password "hdfsdev"'
+RETURN CODE: 0
+
+STDOUT:
+[2026-03-19T17:33:10.057+0530] {workday.py:41} WARNING - Could not import pandas. Holidays will not be considered.
+[2026-03-19T17:33:10.155+0530] {override.py:1597} INFO - Added user ashwanth
+User "ashwanth" created with role "Admin"
+
+STDERR:
+/home/vboxuser/airflow_venv/lib/python3.12/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+
+
+================================================================================
+2026-03-19T17:33:18.831431
+CMD: bash -lc 'ss -ltnp | grep :9871'
+RETURN CODE: 1
+
+STDOUT:
+
+STDERR:
+
+
+================================================================================
+2026-03-19T17:33:19.052196
+CMD: bash -lc 'ps aux | grep -E "airflow webserver|airflow scheduler|airflow triggerer" | grep -v grep'
+RETURN CODE: 0
+
+STDOUT:
+vboxuser   28064 14.9  2.7 1207564 123792 ?      Ss   17:33   0:01 /home/vboxuser/airflow_venv/bin/python /home/vboxuser/airflow_venv/bin/airflow webserver --port 9871
+vboxuser   28065 19.4  2.8 1214852 130884 ?      Ss   17:33   0:01 /home/vboxuser/airflow_venv/bin/python /home/vboxuser/airflow_venv/bin/airflow scheduler
+vboxuser   28066 17.0  2.8 1360584 128964 ?      Ssl  17:33   0:01 /home/vboxuser/airflow_venv/bin/python /home/vboxuser/airflow_venv/bin/airflow triggerer
+vboxuser   28190  8.2  2.5 1215012 114920 ?      S    17:33   0:00 airflow scheduler -- DagFileProcessorManager
+vboxuser   28344 25.0  2.5 1215280 116332 ?      S    17:33   0:00 airflow scheduler - DagFileProcessor /home/vboxuser/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_time_delta_sensor_async.py
+vboxuser   28359 25.0  2.5 1215144 115240 ?      R    17:33   0:00 airflow scheduler - DagFileProcessor /home/vboxuser/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+
+STDERR:
+
